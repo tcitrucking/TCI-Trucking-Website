@@ -4028,3 +4028,7 @@ blockquote{
     -moz-border-radius: 4px;
 }
 
+
+/* Ensure only the main freight services element displays */
+.ms-slide .ms-layer:not(#freight-main) {
+    display: none !important;
