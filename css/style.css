@@ -4028,3 +4028,55 @@ blockquote{
 }
 
 /* OVERRIDE ALL BLUE BACKGROUNDS */ .page-content.dark, .parallax01, .parallax02, .parallax03, .parallax04, .parallax05, .img-bkg01, .img-bkg02, .img-bkg03, .custom-bkg.bkg-dark-blue, .custom-bkg.bkg-light-blue, .pt-bkg01, .pt-bkg02, .pt-bkg03, .pt-bkg04, .pt-bkg05, .pt-bkg06, .pt-bkg07, .pt-bkg08, .pt-bkg09, .pt-bkg10, .pt-bkg11, .pt-bkg12, .pt-bkg13, .pt-bkg14, .pt-bkg15, .pt-bkg16 { background-color: #D4B895; background-image: none; }
+
+
+/* ==========================================================================
+    MOBILE RESPONSIVE FIXES - ADDED FOR TCI TRUCKING
+    ========================================================================= */
+@media (max-width: 991px) {
+    .navbar-collapse {
+    }
+    #dl-menu {
+    }
+    .dl-menuwrapper {
+        float: right;
+        margin-top: 15px;
+    }
+    .dl-trigger {
+    }
+    .col-md-12 {
+        width: 100%;
+    }
+    .navbar-header {
+        float: left;
+        width: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 0 15px;
+    }
+    .row {
+        margin: 0;
+    }
+    [class*="col-"] {
+        width: 100%;
+        padding: 0 15px;
+        margin-bottom: 30px;
+    }
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+    h1 { font-size: 28px; }
+    h2 { font-size: 24px; }
+    h3 { font-size: 20px; }
+    .page-content {
+        padding: 40px 0;
+    }
+    .page-title-style01 h1 {
+        font-size: 24px;
+    }
+}
