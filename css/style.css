@@ -4080,3 +4080,54 @@ blockquote{
         font-size: 24px;
     }
 }
+
+
+/* ==========================================================================
+    FORCE DESKTOP VIEW ON MOBILE - TEMPORARY FIX
+    ========================================================================= */
+@media (max-width: 768px) {
+    /* Reset all responsive overrides */
+    .container, .container-fluid {
+        width: 1170px !important;
+        padding: 0 15px !important;
+        margin: 0 auto !important;
+        overflow-x: auto !important;
+    }
+    
+    [class*="col-"] {
+        float: left !important;
+        width: auto !important;
+        padding: 0 15px !important;
+        margin-bottom: 0 !important;
+    }
+    
+    .col-md-1 { width: 8.33333333% !important; }
+    .col-md-2 { width: 16.66666667% !important; }
+    .col-md-3 { width: 25% !important; }
+    .col-md-4 { width: 33.33333333% !important; }
+    .col-md-5 { width: 41.66666667% !important; }
+    .col-md-6 { width: 50% !important; }
+    .col-md-7 { width: 58.33333333% !important; }
+    .col-md-8 { width: 66.66666667% !important; }
+    .col-md-9 { width: 75% !important; }
+    .col-md-10 { width: 83.33333333% !important; }
+    .col-md-11 { width: 91.66666667% !important; }
+    .col-md-12 { width: 100% !important; }
+    
+    /* Force horizontal scroll */
+    body {
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch !important;
+    }
+    
+    /* Keep navigation visible */
+    .navbar-collapse {
+        display: block !important;
+        width: auto !important;
+    }
+    
+    /* Hide mobile menu button */
+    .dl-trigger, .dl-menuwrapper {
+        display: none !important;
+    }
+}
