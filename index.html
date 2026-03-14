@@ -37,12 +37,13 @@
         }
     }
 
-    /* MOBILE MENU - OVERLAY STYLE */
+    /* MOBILE MENU - OVERLAY STYLE - UPDATED */
     @media (max-width: 991px) {
         .mobile-menu-button {
             position: fixed !important;
-            top: 15px !important;
-            right: 15px !important;
+            top: 50% !important;
+            right: 20px !important;
+            transform: translateY(-50%) !important;
             z-index: 10001 !important;
         }
         
@@ -50,12 +51,13 @@
             background: #D4B895 !important;
             color: black !important;
             border: none !important;
-            padding: 10px 20px !important;
-            font-size: 16px !important;
+            padding: 15px 30px !important;
+            font-size: 24px !important;
             font-weight: bold !important;
             border-radius: 5px !important;
             cursor: pointer !important;
             box-shadow: 0 2px 10px rgba(0,0,0,0.2) !important;
+            letter-spacing: 1px !important;
         }
         
         .mobile-menu {
@@ -91,7 +93,7 @@
             padding: 20px !important;
             color: white !important;
             text-decoration: none !important;
-            font-size: 20px !important;
+            font-size: 24px !important;
             font-weight: 600 !important;
             transition: all 0.3s !important;
         }
@@ -101,51 +103,18 @@
             color: black !important;
         }
         
-        /* Close button */
         .mobile-menu-close {
             position: absolute !important;
             top: 15px !important;
             right: 15px !important;
             color: white !important;
-            font-size: 30px !important;
+            font-size: 36px !important;
             cursor: pointer !important;
             z-index: 10002 !important;
         }
         
         .mobile-menu-close:hover {
             color: #D4B895 !important;
-        }
-    }
-
-    /* SCROLL INDICATOR */
-    .scroll-indicator {
-        display: none;
-    }
-    
-    @media (max-width: 768px) {
-        .scroll-indicator {
-            display: block;
-            text-align: center;
-            margin: 20px 0 10px;
-            animation: bounce 2s infinite;
-        }
-        
-        .scroll-indicator span {
-            color: #D4B895;
-            font-size: 14px;
-            display: block;
-            margin-bottom: 5px;
-        }
-        
-        .scroll-indicator i {
-            color: #D4B895;
-            font-size: 24px;
-        }
-        
-        @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
-            40% {transform: translateY(-10px);}
-            60% {transform: translateY(-5px);}
         }
     }
 </style>
