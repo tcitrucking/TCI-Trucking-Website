@@ -37,42 +37,27 @@
         }
     }
 
-       /* MOBILE MENU - OVERLAY STYLE */
-    .mobile-menu {
-        display: none;
-        position: fixed !important;
-        top: 0 !important;
-        left: 0 !important;
-        right: 0 !important;
-        bottom: 0 !important;
-        background: rgba(0,0,0,0.95) !important;
-        z-index: 10000 !important;
-        padding: 60px 20px !important;
-        overflow-y: auto !important;
+      /* MOBILE MENU - OVERLAY STYLE */
+@media (max-width: 991px) {
+    .mobile-menu-button {
+        position: relative !important;
+        margin: 10px auto !important;
+        text-align: center !important;
+        width: 100% !important;
     }
     
-    .mobile-menu.show {
-        display: block !important;
-    }
-    
-    .mobile-menu ul {
-        list-style: none !important;
-        padding: 0 !important;
-        margin: 0 !important;
-    }
-    
-    .mobile-menu > ul > li {
-        margin-bottom: 5px !important;
-    }
-    
-    .mobile-menu > ul > li > a {
-        display: block !important;
-        padding: 15px !important;
-        color: white !important;
-        text-decoration: none !important;
+    .mobile-menu-button button {
+        background: #D4B895 !important;
+        color: black !important;
+        border: none !important;
+        padding: 12px 40px !important;  /* Wider padding like before */
         font-size: 18px !important;
-        font-weight: 600 !important;
-        border-bottom: 1px solid rgba(255,255,255,0.1) !important;
+        font-weight: bold !important;
+        border-radius: 5px !important;
+        cursor: pointer !important;
+        display: inline-block !important;
+        text-transform: uppercase !important;  /* Add this for ALL CAPS */
+        letter-spacing: 1px !important;
     }
     
     /* Submenu styles */
