@@ -123,6 +123,34 @@
     }
 }
 </style>
+<script>
+function toggleMobileMenu() {
+    const menu = document.getElementById('mobileMenu');
+    menu.classList.toggle('show');
+}
+
+function closeMobileMenu() {
+    document.getElementById('mobileMenu').classList.remove('show');
+    // Also close all submenus when closing main menu
+    document.querySelectorAll('.mobile-submenu').forEach(sub => {
+        sub.style.display = 'none';
+    });
+}
+
+function toggleSubmenu(event, submenuId) {
+    event.preventDefault();
+    const submenu = document.getElementById(submenuId);
+    const isVisible = submenu.style.display === 'block';
+    
+    // Close all other submenus first
+    document.querySelectorAll('.mobile-submenu').forEach(sub => {
+        sub.style.display = 'none';
+    });
+    
+    // Toggle the clicked one
+    submenu.style.display = isVisible ? 'none' : 'block';
+}
+</script>
 
 <script>
 function toggleMobileMenu() {
@@ -227,25 +255,44 @@ function closeMobileMenu() {
                                         </div><!-- #dl-menu end -->
                                     </div><!-- MAIN NAVIGATION END -->
                                  </nav><!-- .navbar.navbar-default end -->
-                                <!-- MOBILE MENU - OVERLAY STYLE -->
+                                                                </nav><!-- .navbar.navbar-default end -->
+                                
+                                <!-- MOBILE MENU - OVERLAY STYLE WITH SUBSECTIONS -->
                                 <div class="mobile-menu-button">
                                     <button onclick="toggleMobileMenu()">☰ MENU</button>
                                 </div>
                                 <div class="mobile-menu" id="mobileMenu">
                                     <div class="mobile-menu-close" onclick="closeMobileMenu()">✕</div>
                                     <ul>
-                                        <li><a href="index.html" onclick="closeMobileMenu()">HOME</a></li>
-                                        <li><a href="about01.html" onclick="closeMobileMenu()">ABOUT</a></li>
-                                        <li><a href="services01.html" onclick="closeMobileMenu()">SERVICES</a></li>
-                                        <li><a href="contact-simple.html" onclick="closeMobileMenu()">CONTACT</a></li>
+                                        <li>
+                                            <a href="#" onclick="toggleSubmenu(event, 'home-submenu')">HOME ▼</a>
+                                            <ul class="mobile-submenu" id="home-submenu">
+                                                <li><a href="index.html" onclick="closeMobileMenu()">Home</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="#" onclick="toggleSubmenu(event, 'about-submenu')">ABOUT ▼</a>
+                                            <ul class="mobile-submenu" id="about-submenu">
+                                                <li><a href="about01.html" onclick="closeMobileMenu()">Who We Are</a></li>
+                                                <li><a href="simple-page-title.html" onclick="closeMobileMenu()">Meet the Team</a></li>
+                                                <li><a href="driver-application.html" onclick="closeMobileMenu()">Online Driver Application</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="#" onclick="toggleSubmenu(event, 'services-submenu')">SERVICES ▼</a>
+                                            <ul class="mobile-submenu" id="services-submenu">
+                                                <li><a href="services01.html" onclick="closeMobileMenu()">What We Offer</a></li>
+                                                <li><a href="consulting-services.html" onclick="closeMobileMenu()">Frequently Asked Questions</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="#" onclick="toggleSubmenu(event, 'contact-submenu')">CONTACT ▼</a>
+                                            <ul class="mobile-submenu" id="contact-submenu">
+                                                <li><a href="contact-simple.html" onclick="closeMobileMenu()">Contact Us</a></li>
+                                            </ul>
+                                        </li>
                                     </ul>
                                 </div>
-                                
-                            </div><!-- .col-md-12 end -->
-                                    </ul>
-                                </div>
-                                
-                            </div><!-- .col-md-12 end -->
                             </div><!-- .col-md-12 end -->
                         </div><!-- .row end -->
                     </div><!-- .main-nav end -->
