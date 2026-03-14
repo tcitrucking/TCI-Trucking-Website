@@ -4029,245 +4029,49 @@ blockquote{
 
 /* OVERRIDE ALL BLUE BACKGROUNDS */ .page-content.dark, .parallax01, .parallax02, .parallax03, .parallax04, .parallax05, .img-bkg01, .img-bkg02, .img-bkg03, .custom-bkg.bkg-dark-blue, .custom-bkg.bkg-light-blue, .pt-bkg01, .pt-bkg02, .pt-bkg03, .pt-bkg04, .pt-bkg05, .pt-bkg06, .pt-bkg07, .pt-bkg08, .pt-bkg09, .pt-bkg10, .pt-bkg11, .pt-bkg12, .pt-bkg13, .pt-bkg14, .pt-bkg15, .pt-bkg16 { background-color: #D4B895; background-image: none; }
 
-
 /* ==========================================================================
-    MOBILE RESPONSIVE FIXES - ADDED FOR TCI TRUCKING
+    CLEAN MOBILE STYLES - FINAL VERSION
     ========================================================================= */
+/* Tablets and small desktops */
 @media (max-width: 991px) {
+    /* Show mobile menu, hide desktop menu */
     .navbar-collapse {
-    }
-    #dl-menu {
-    }
-    .dl-menuwrapper {
-        float: right;
-        margin-top: 15px;
-    }
-    .dl-trigger {
-    }
-    .col-md-12 {
-        width: 100%;
-    }
-    .navbar-header {
-        float: left;
-        width: auto;
-    }
-}
-
-@media (max-width: 768px) {
-    .container {
-        width: 100%;
-        padding: 0 15px;
-    }
-    .row {
-        margin: 0;
-    }
-    [class*="col-"] {
-        width: 100%;
-        padding: 0 15px;
-        margin-bottom: 30px;
-    }
-    img {
-        max-width: 100%;
-        height: auto;
-    }
-    h1 { font-size: 28px; }
-    h2 { font-size: 24px; }
-    h3 { font-size: 20px; }
-    .page-content {
-        padding: 40px 0;
-    }
-    .page-title-style01 h1 {
-        font-size: 24px;
-    }
-}
-
-
-/* ==========================================================================
-    FORCE DESKTOP VIEW ON MOBILE - TEMPORARY FIX
-    ========================================================================= */
-@media (max-width: 768px) {
-    /* Reset all responsive overrides */
-    .container, .container-fluid {
-        width: 1170px !important;
-        padding: 0 15px !important;
-        margin: 0 auto !important;
-        overflow-x: auto !important;
-    }
-    
-    [class*="col-"] {
-        float: left !important;
-        width: auto !important;
-        padding: 0 15px !important;
-        margin-bottom: 0 !important;
-    }
-    
-    .col-md-1 { width: 8.33333333% !important; }
-    .col-md-2 { width: 16.66666667% !important; }
-    .col-md-3 { width: 25% !important; }
-    .col-md-4 { width: 33.33333333% !important; }
-    .col-md-5 { width: 41.66666667% !important; }
-    .col-md-6 { width: 50% !important; }
-    .col-md-7 { width: 58.33333333% !important; }
-    .col-md-8 { width: 66.66666667% !important; }
-    .col-md-9 { width: 75% !important; }
-    .col-md-10 { width: 83.33333333% !important; }
-    .col-md-11 { width: 91.66666667% !important; }
-    .col-md-12 { width: 100% !important; }
-    
-    /* Force horizontal scroll */
-    body {
-        overflow-x: auto !important;
-        -webkit-overflow-scrolling: touch !important;
-    }
-    
-    /* Keep navigation visible */
-    .navbar-collapse {
-        display: block !important;
-        width: auto !important;
-    }
-    
-    /* Hide mobile menu button */
-    .dl-trigger, .dl-menuwrapper {
-        display: none !important;
-    }
-}
-
-
-/* ==========================================================================
-    FORCE DESKTOP MENU ON MOBILE
-    ========================================================================= */
-@media (max-width: 991px) {
-    /* Hide mobile menu button */
-    .dl-trigger, 
-    .dl-menuwrapper,
-    #dl-menu {
         display: none !important;
     }
     
-    /* Show desktop navigation */
-    .navbar-collapse {
-        display: block !important;
-        float: right !important;
-        width: auto !important;
-    }
-    
-    .navbar-nav {
-        margin: 0 !important;
-        float: left !important;
-    }
-    
-    .navbar-nav > li {
-        float: left !important;
-    }
-
-
-/* ==========================================================================
-    PROPER MOBILE MENU FIXES
-    ========================================================================= */
-@media (max-width: 991px) {
-    /* Show mobile menu button */
     .dl-menuwrapper {
         display: block !important;
         float: right;
-        margin-top: 15px;
-    }
-    
-    .dl-trigger {
-        display: block !important;
-        background: #333;
-        color: white;
-        border: none;
-        padding: 10px 15px;
-        border-radius: 3px;
-        font-size: 14px;
-        cursor: pointer;
-    }
-    
-    /* Hide desktop menu on mobile */
-    .navbar-collapse {
-        display: none !important;
-    }
-    
-    /* Style the mobile menu */
-    .dl-menu {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        background: #fff;
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        margin-top: 10px;
+        position: relative;
         z-index: 1000;
     }
     
-    .dl-menu li {
-        border-bottom: 1px solid #eee;
-    }
-    
-    .dl-menu li a {
-        display: block;
-        padding: 15px 20px;
-        color: #333;
-        text-decoration: none;
-    }
-    
-    .dl-menu li a:hover {
-        background: #f5f5f5;
-    }
-}
-
-
-/* ==========================================================================
-    FIX MOBILE MENU DISPLAY
-    ========================================================================= */
-@media (max-width: 991px) {
-    /* Hide desktop menu */
-    .navbar-collapse {
-        display: none !important;
-    }
-    
-    /* Show mobile menu button */
-    .dl-menuwrapper {
+    .dl-trigger {
         display: block !important;
-        position: relative;
-        float: right;
-        width: 100%;
-        max-width: 300px;
-    }
-    
-    .dl-menuwrapper button {
-        background: #333;
-        border: none;
-        color: white;
-        padding: 12px 20px;
-        font-size: 14px;
-        text-transform: uppercase;
-        font-weight: bold;
-        border-radius: 3px;
-        cursor: pointer;
-        width: 100%;
-        text-align: left;
-    }
-    
-    .dl-menuwrapper button:after {
-        content: "☰";
-        float: right;
-        font-size: 20px;
+        background: #D4B895 !important;
+        color: #000 !important;
+        border: none !important;
+        padding: 12px 25px !important;
+        font-size: 15px !important;
+        font-weight: bold !important;
+        text-transform: uppercase !important;
+        border-radius: 5px !important;
+        cursor: pointer !important;
+        width: auto !important;
     }
     
     .dl-menu {
         position: absolute;
         top: 100%;
-        left: 0;
         right: 0;
         background: white;
         list-style: none;
         padding: 0;
         margin: 0;
-        box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
         z-index: 1000;
+        min-width: 250px;
         display: none;
     }
     
@@ -4291,13 +4095,6 @@ blockquote{
         background: #f5f5f5;
     }
     
-    .dl-submenu {
-        list-style: none;
-        padding-left: 20px;
-        background: #f9f9f9;
-    }
-    
-    /* Adjust header for mobile */
     .navbar-header {
         width: 100%;
     }
@@ -4307,10 +4104,7 @@ blockquote{
     }
 }
 
-
-/* ==========================================================================
-    DEDICATED PHONE VERSION - OPTIMIZED FOR MOBILE
-    ========================================================================= */
+/* Phones */
 @media (max-width: 768px) {
     /* Make everything stack vertically */
     .container {
@@ -4319,7 +4113,7 @@ blockquote{
         overflow-x: hidden !important;
     }
     
-    /* Make all columns full width */
+    /* Full width columns */
     [class*="col-"] {
         width: 100% !important;
         float: none !important;
@@ -4327,7 +4121,7 @@ blockquote{
         margin-bottom: 30px !important;
     }
     
-    /* Fix header for mobile */
+    /* Header */
     .navbar-header {
         width: 100% !important;
         text-align: center !important;
@@ -4339,74 +4133,64 @@ blockquote{
     }
     
     .logo img {
-        max-width: 180px !important;
+        max-width: 160px !important;
         height: auto !important;
     }
     
-    /* Mobile menu button */
+    /* Mobile menu */
     .dl-menuwrapper {
-        display: block !important;
         width: 100% !important;
-        margin: 10px 0 !important;
+        margin: 15px 0 !important;
     }
     
     .dl-trigger {
         width: 100% !important;
-        background: #D4B895 !important;
-        color: #000 !important;
-        border: none !important;
-        padding: 15px !important;
-        font-size: 16px !important;
-        font-weight: bold !important;
-        text-transform: uppercase !important;
-        border-radius: 5px !important;
-        cursor: pointer !important;
+        text-align: left !important;
     }
     
-    /* Hide desktop menu */
-    .navbar-collapse {
-        display: none !important;
+    .dl-menu {
+        width: 100% !important;
     }
     
     /* Page titles */
     .page-title-style01 {
-        padding: 100px 0 50px !important;
+        padding: 80px 0 40px !important;
     }
     
     .page-title-style01 h1 {
-        font-size: 28px !important;
+        font-size: 26px !important;
         line-height: 1.3 !important;
     }
     
     /* Headings */
-    h1 { font-size: 32px !important; }
-    h2 { font-size: 28px !important; }
-    h3 { font-size: 24px !important; }
-    h4 { font-size: 20px !important; }
+    h1 { font-size: 28px !important; }
+    h2 { font-size: 24px !important; }
+    h3 { font-size: 20px !important; }
+    h4 { font-size: 18px !important; }
     
     /* Text */
     p {
-        font-size: 15px !important;
+        font-size: 14px !important;
         line-height: 1.6 !important;
     }
     
     /* Services cards */
     .service-feature-box {
-        margin-bottom: 30px !important;
+        margin-bottom: 25px !important;
     }
     
     /* Stats section */
     .industrial-stats {
         grid-template-columns: 1fr 1fr !important;
-        gap: 15px !important;
+        gap: 10px !important;
     }
     
     .industrial-stat {
-        padding: 20px !important;
+        padding: 15px !important;
     }
     
     .industrial-stat .number {
-        font-size: 36px !important;
+        font-size: 32px !important;
     }
     
     /* Footer */
@@ -4425,21 +4209,21 @@ blockquote{
         height: auto !important;
     }
     
-    /* Hide horizontal scroll */
+    /* No horizontal scroll */
     body {
         overflow-x: hidden !important;
     }
     
-    /* Fix spacing */
+    /* Spacing */
     .page-content {
-        padding: 40px 0 !important;
+        padding: 30px 0 !important;
     }
     
     .row {
         margin: 0 !important;
     }
     
-    /* Make buttons full width on mobile */
+    /* Buttons full width */
     .btn, 
     .wpcf7-submit,
     button[type="submit"] {
@@ -4448,17 +4232,16 @@ blockquote{
     }
 }
 
-/* Extra small phones */
+/* Small phones */
 @media (max-width: 480px) {
     .industrial-stats {
         grid-template-columns: 1fr !important;
     }
     
-    h1 { font-size: 28px !important; }
-    h2 { font-size: 24px !important; }
+    h1 { font-size: 24px !important; }
+    h2 { font-size: 22px !important; }
     
     .page-title-style01 h1 {
-        font-size: 24px !important;
+        font-size: 22px !important;
     }
 }
-
