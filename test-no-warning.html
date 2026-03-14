@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+    /* This should NOT give yellow warning */
+    input[type="number"]::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+    }
+    input[type="number"] {
+        -moz-appearance: textfield;
+    }
+    </style>
+</head>
+<body>
+    <input type="number">
+</body>
+</html>

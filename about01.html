@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Trucking - Transportation and Logistics About Us</title>
+        <meta name="description" content="TCI Trucking LLC - Professional Trucking and Transport Services">
+        <meta name="author" content="pixel-industry">
+        <meta name="keywords" content="transportation, logistics, transportation template, logistics template, cargo, business">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Stylesheets -->
+        <link rel="stylesheet" href="css/bootstrap.css"/><!-- bootstrap grid -->
+        <link rel="stylesheet" href="css/animate.css"/><!-- animations -->
+        <link rel='stylesheet' href='owl-carousel/owl.carousel.css'/><!-- Client carousel -->
+        <link rel="stylesheet" href="css/style.css"/><!-- template styles -->
+        <link rel="stylesheet" href="css/color-default.css"/><!-- template main color -->
+        <link rel="stylesheet" href="css/retina.css"/><!-- retina ready styles -->
+        <link rel="stylesheet" href="css/responsive.css"/><!-- responsive styles -->
+        <!-- Google Web fonts -->
+        <link href='http://fonts.googleapis.com/css?family=Raleway:400,500,600,700,800' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,400,800,700,600' rel='stylesheet' type='text/css'>
+        <!-- Font icons -->
+        <link rel="stylesheet" href="icon-fonts/font-awesome-4.3.0/css/font-awesome.min.css"/><!-- Fontawesome icons css -->
+        <!-- Font Awesome 6 for new design -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        
+        <!-- NEW VERTICAL SPLIT DESIGN -->
+        <style>
+            /* Vertical Split Layout */
+            .vertical-split-section {
+                position: relative;
+                min-height: 800px;
+                display: flex;
+                margin: 40px 0;
+                overflow: hidden;
+            }
+            
+            .split-left {
+                flex: 1;
+                background-color: #000000;
+                color: white;
+                padding: 60px 40px;
+                position: relative;
+                display: flex;
+                align-items: center;
+            }
+            
+            .split-left::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 4px;
+                height: 100%;
+                background: linear-gradient(to bottom, #D4B895, #ffffff, #D4B895);
+            }
+            
+            .split-right {
+                flex: 1;
+                background-color: #ffffff;
+                color: #333333;
+                padding: 60px 40px;
+                display: flex;
+                align-items: center;
+            }
+            
+            .split-content {
+                max-width: 500px;
+                margin: 0 auto;
+            }
+            
+            /* Left side styles (black) */
+            .split-left .section-title {
+                font-size: 14px;
+                text-transform: uppercase;
+                letter-spacing: 3px;
+                color: #D4B895;
+                margin-bottom: 20px;
+                font-weight: 600;
+            }
+            
+            .split-left h2 {
+                font-size: 48px;
+                font-weight: 800;
+                color: white;
+                margin-bottom: 30px;
+                line-height: 1.2;
+                font-family: 'Raleway', sans-serif;
+            }
+            
+            .split-left h2 span {
+                color: #D4B895;
+                display: block;
+                font-size: 32px;
+                font-weight: 400;
+                margin-top: 10px;
+            }
+            
+            .split-left .highlight-text {
+                font-size: 18px;
+                color: #D4B895;
+                margin-bottom: 25px;
+                font-weight: 600;
+                border-left: 3px solid #D4B895;
+                padding-left: 20px;
+            }
+            
+            .split-left p {
+                color: #cccccc;
+                line-height: 1.8;
+                margin-bottom: 30px;
+            }
+            
+            /* Stats Container (in left side) */
+            .stats-container-left {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 30px;
+                margin-top: 40px;
+            }
+            
+            .stat-item-left {
+                text-align: center;
+            }
+            
+            .stat-number-left {
+                font-size: 42px;
+                font-weight: 800;
+                color: #D4B895;
+                line-height: 1;
+                margin-bottom: 10px;
+                font-family: 'Raleway', sans-serif;
+            }
+            
+            .stat-label-left {
+                font-size: 14px;
+                color: white;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                font-weight: 600;
+            }
+            
+            /* Right side styles (white) */
+            .split-right .section-subtitle {
+                font-size: 14px;
+                text-transform: uppercase;
+                letter-spacing: 3px;
+                color: #D4B895;
+                margin-bottom: 15px;
+                font-weight: 600;
+            }
+            
+            .split-right h3 {
+                font-size: 30px;
+                font-weight: 700;
+                color: #000000;
+                margin-bottom: 25px;
+                font-family: 'Raleway', sans-serif;
+                position: relative;
+                padding-bottom: 15px;
+            }
+            
+            .split-right h3::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 60px;
+                height: 3px;
+                background-color: #D4B895;
+            }
+            
+            .split-right .feature-list {
+                margin-top: 30px;
+            }
+            
+            .split-right .feature-item {
+                display: flex;
+                gap: 15px;
+                margin-bottom: 25px;
+                align-items: flex-start;
+            }
+            
+            .feature-icon {
+                width: 40px;
+                height: 40px;
+                background-color: #D4B895;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: black;
+                font-size: 18px;
+                flex-shrink: 0;
+            }
+            
+            .feature-text h4 {
+                font-size: 18px;
+                font-weight: 700;
+                color: #000000;
+                margin-bottom: 5px;
+            }
+            
+            .feature-text p {
+                color: #666;
+                line-height: 1.6;
+                margin: 0;
+            }
+            
+            /* Responsive */
+            @media (max-width: 992px) {
+                .vertical-split-section {
+                    flex-direction: column;
+                }
+                
+                .split-left::after {
+                    width: 100%;
+                    height: 4px;
+                    top: auto;
+                    bottom: 0;
+                    right: auto;
+                    background: linear-gradient(to right, #D4B895, #ffffff, #D4B895);
+                }
+                
+                .split-left h2 {
+                    font-size: 42px;
+                }
+            }
+            
+            @media (max-width: 768px) {
+                .split-left, .split-right {
+                    padding: 40px 20px;
+                }
+                
+                .split-left h2 {
+                    font-size: 36px;
+                }
+                
+                .stats-container-left {
+                    grid-template-columns: 1fr;
+                }
+            }
+            
+            /* Remove gap from page title */
+            .page-title-style01 {
+                margin-bottom: 0 !important;
+                padding-bottom: 0 !important;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="header-wrapper">
+            <!-- .header.header-style01 start -->
+            <header id="header"  class="header-style02">
+                <div id="top-bar-wrapper" class="clearfix">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <ul id="quick-links">
+                                    <li>
+                                        <i class="fa fa-phone"></i>
+                                        <span>(509) 818-2623</span>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-envelope"></i>
+                                        <a href="contact-simple.html">Contact us today</a>
+                                    </li>
+                                </ul><!-- .quick links end -->
+                            </div><!-- .col-md-6 end -->
+                        </div><!-- .row end -->
+                    </div><!-- .container end -->
+                </div><!-- .top-bar-wrapper end -->
+            </header>
+        </div>
+        
+        <div class="header-wrapper header-transparent">
+            <header id="header" class="header-style01">
+                <div class="container">
+                    <div class="main-nav">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <nav class="navbar navbar-default nav-left" role="navigation">
+                                    <div class="navbar-header">
+                                        <div class="logo">
+                                            <a href="index.html">
+                                                <img src="img/logo.jpg" alt="TCI Trucking LLC" style="width: 200px; height: auto;">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="collapse navbar-collapse">
+                                        <ul class="nav navbar-nav">
+                                            <li class="dropdown">
+                                                <a href="#" data-toggle="dropdown" class="dropdown-toggle">Home</a>
+                                                <ul class="dropdown-menu">
+                                                    <li><a href="index.html">Home</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown current-menu-item">
+                                                <a href="#" data-toggle="dropdown" class="dropdown-toggle">About</a>
+                                                <ul class="dropdown-menu">
+                                                    <li><a href="about01.html">Who We Are</a></li>
+                                                    <li><a href="simple-page-title.html">Meet the Team</a></li>
+                                                    <li><a href="driver-application.html">Online Driver Application</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown">
+                                                <a href="#" data-toggle="dropdown" class="dropdown-toggle">Services</a>
+                                                <ul class="dropdown-menu">
+                                                    <li><a href="services01.html">What We Offer</a></li>
+                                                    <li><a href="consulting-services.html">Frequently Asked Questions</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown">
+                                                <a href="#" data-toggle="dropdown" class="dropdown-toggle">Contact</a>
+                                                <ul class="dropdown-menu">
+                                                    <li><a href="contact-simple.html">Contact Us</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+        </div>
+        
+        <!-- .page-title start -->
+        <div class="page-title-style01 page-title-negative-top pt-bkg01">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1>Reliable. Dedicated. Delivered.</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- NEW VERTICAL SPLIT SECTION -->
+        <div class="vertical-split-section">
+            <!-- LEFT SIDE - BLACK with STATS -->
+            <div class="split-left">
+                <div class="split-content">
+                    <div class="section-title">FROM THE DRIVER'S SEAT</div>
+                    <h2>Leading the Way <span>with Integrity & Passion</span></h2>
+                    <div class="highlight-text">Founded by Drivers, for Drivers</div>
+                    <p>Founded by a husband-and-wife team who spent years driving together, TCI Trucking was built on real experience and a genuine passion for the industry. We've sat in the driver's seat, faced the challenges, and understood the gaps that make the job harder than it needs to be.</p>
+                    
+                    <!-- STATS WITH COUNTING ANIMATION -->
+                    <div class="stats-container-left">
+                        <div class="stat-item-left">
+                            <div class="stat-number-left"><span class="count" data-count="99">0</span>%+</div>
+                            <div class="stat-label-left">On-Time Delivery</div>
+                        </div>
+                        <div class="stat-item-left">
+                            <div class="stat-number-left"><span class="count" data-count="17">0</span>+</div>
+                            <div class="stat-label-left">States Served</div>
+                        </div>
+                        <div class="stat-item-left">
+                            <div class="stat-number-left"><span class="count" data-count="90">0</span>%+</div>
+                            <div class="stat-label-left">Broker Utilization</div>
+                        </div>
+                        <div class="stat-item-left">
+                            <div class="stat-number-left"><span class="count" data-count="88">0</span>K+</div>
+                            <div class="stat-label-left">Miles Since '25</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- RIGHT SIDE - WHITE with CONTENT -->
+            <div class="split-right">
+                <div class="split-content">
+                    <div class="section-subtitle">ABOUT TCI TRUCKING</div>
+                    <h3>More Than Just a <span style="color: rgb(0, 0, 0); display: inline-block;">Trucking Company</span></h3>
+                    <p style="color: #667; line-height: 1.8; margin-bottom: 30px;">We're not disconnected executives. We're drivers who logged thousands of miles together and built a company based on what actually matters out there.</p>
+                    
+                    <div class="feature-list">
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fas fa-users"></i></div>
+                            <div class="feature-text">
+                                <h4>Direct Access to Leadership</h4>
+                                <p>No layers, no gatekeepers. You get our personal numbers and real communication.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fas fa-road"></i></div>
+                            <div class="feature-text">
+                                <h4>Built on Real-World Experience</h4>
+                                <p>Every decision is shaped by on-the-road knowledge, not boardroom meetings.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fas fa-heart"></i></div>
+                            <div class="feature-text">
+                                <h4>Family-Owned & Operated</h4>
+                                <p>We treat our partners with respect, transparency, and loyalty.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fas fa-handshake"></i></div>
+                            <div class="feature-text">
+                                <h4>Focused on Relationships</h4>
+                                <p>Trucking is about trust, consistency, and long-term partnerships.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="footer-wrapper" class="footer-dark">
+    <footer id="footer">
+        <div class="container">
+            <div class="row">
+                
+                <!-- COLUMN 1 - WHY DRIVERS CHOOSE TCI -->
+                <div class="col-md-4 col-sm-12 footer-widget-container">
+                    <div class="widget widget_newsletterwidget">
+                        <div class="title">
+                            <h3>WHY DRIVERS CHOOSE TCI</h3>
+                        </div>
+                        <p>90% Revenue to You – Keep more of what you earn</p>
+                        <p>Choose Your Loads – Our board, your choice. No forced dispatch</p>
+                        <p>3-Day Payments – Reliable direct deposit after paperwork</p>
+                        <p>24/7 Support – Real people, real support whenever you need it</p>
+                        
+                        <!-- NEWSLETTER FORM -->
+                        <div style="margin-top: 20px;">
+                            <p style="color: #bcc0c4; margin-bottom: 10px;">Email Us to learn more!</p>
+                            
+                            <form id="newsletterForm" action="https://formspree.io/f/mwvredgp" method="POST" style="position: relative; width: 100%; max-width: 280px;">
+                                <input type="hidden" name="_subject" value="New Newsletter Subscription - TCI Trucking">
+                                <input type="email" name="email" id="newsletterEmail" placeholder="Your email..." required 
+                                       style="width: 100%; padding: 10px 50px 10px 12px; background-color: #565f66; 
+                                              border: none; border-radius: 3px; color: #bcc0c4; font-style: italic; 
+                                              box-sizing: border-box; height: 40px; font-size: 13px;">
+                                
+                                <button type="submit" id="newsletterSubmitBtn" style="position: absolute; top: 0; right: 0; width: 40px; height: 40px; 
+                                        background-color: #D4B895; border: none; border-radius: 0 3px 3px 0; 
+                                        cursor: pointer; display: flex; align-items: center; justify-content: center;"
+                                        onmouseover="this.style.backgroundColor='#c0a07a'"
+                                        onmouseout="this.style.backgroundColor='#D4B895'">
+                                    <i class="fa fa-envelope" style="color: #000000; font-size: 16px;"></i>
+                                </button>
+                            </form>
+                            
+                            <!-- Success Message -->
+                            <div id="newsletterMessage" style="margin-top: 10px; color: #27ae60; font-size: 12px; display: none;"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- COLUMN 2 - LOGO -->
+                <div class="col-md-4 col-sm-12 footer-widget-container">
+                    <div class="widget widget_pages">
+                        <div class="icon-container" style="text-align: center;">
+                            <img class="svg-black" src="img/logofooter.png" alt="TCI Trucking Logo" style="max-width: 370px;">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- COLUMN 3 - CONTACT US -->
+                <ul class="col-md-4 col-sm-12 footer-widget-container clearfix">
+                            <li class="widget widget-text">
+                                <div class="title">
+                                    <h3>contact us</h3>
+                                </div>
+                                <address>
+                                    1523 N 13th St, <br />
+                                    Coeur d'Alene, ID
+                                </address>
+                                <span class="text-big">
+                                    (509) 818-2623
+                                </span>
+                                <p>tcitruckingllcinfo@gmail.com</p>
+                                <br />
+                                    <ul class="footer-social-icons" style="display: none;">
+                                    <li><a href="#" class="fa fa-facebook"></a></li>
+                                    <li><a href="#" class="fa fa-twitter"></a></li>
+                                    <li><a href="#" class="fa fa-google-plus"></a></li>
+                    </div><!-- .row end -->
+                </div><!-- .container end -->
+            </footer><!-- #footer end -->
+    <!-- COPYRIGHT SECTION -->
+    <div class="copyright-container">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <p style="color: #7f8c8d; text-align: center;">© 2026 TCI Trucking LLC | 
+                        <a href="Privacy Policy.html" style="color: inherit; text-decoration: none;">Privacy Policy</a> 
+                        | All Rights Reserved | USDOT 4027139 | MC 1520494
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a href="#" class="scroll-up">Scroll</a>
+</div><!-- #footer-wrapper end -->
+
+<!-- Newsletter Form JavaScript -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('newsletterForm');
+    
+    if (form) {
+        form.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const emailInput = document.getElementById('newsletterEmail');
+            const messageDiv = document.getElementById('newsletterMessage');
+            const submitBtn = document.getElementById('newsletterSubmitBtn');
+            const email = emailInput.value.trim();
+            
+            // Simple validation
+            if (!email || !email.includes('@') || !email.includes('.')) {
+                messageDiv.style.display = 'block';
+                messageDiv.style.backgroundColor = '#f8d7da';
+                messageDiv.style.color = '#721c24';
+                messageDiv.innerHTML = '❌ Please enter a valid email address.';
+                return;
+            }
+            
+            // Show loading state
+            messageDiv.style.display = 'block';
+            messageDiv.style.backgroundColor = '#f0f0f0';
+            messageDiv.style.color = '#333';
+            messageDiv.innerHTML = '⏳ Subscribing...';
+            submitBtn.disabled = true;
+            
+            const formData = new FormData(form);
+            
+            try {
+                const response = await fetch(form.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+                
+                if (response.ok) {
+                    messageDiv.style.backgroundColor = '#d4edda';
+                    messageDiv.style.color = '#155724';
+                    messageDiv.innerHTML = '✓ Thanks for subscribing!';
+                    form.reset();
+                    
+                    setTimeout(() => {
+                        messageDiv.style.display = 'none';
+                    }, 5000);
+                } else {
+                    const data = await response.json();
+                    messageDiv.style.backgroundColor = '#f8d7da';
+                    messageDiv.style.color = '#721c24';
+                    messageDiv.innerHTML = '❌ ' + (data.errors ? data.errors.map(error => error.message).join(', ') : 'Something went wrong.');
+                }
+            } catch (error) {
+                messageDiv.style.display = 'block';
+                messageDiv.style.backgroundColor = '#f8d7da';
+                messageDiv.style.color = '#721c24';
+                messageDiv.innerHTML = '❌ Network error. Please try again.';
+            } finally {
+                submitBtn.disabled = false;
+            }
+        });
+    }
+});
+</script>
+
+        <!-- COUNTING ANIMATION SCRIPT -->
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const counters = document.querySelectorAll('.count');
+            const speed = 200;
+            
+            const animateCounter = (counter) => {
+                const updateCount = () => {
+                    const target = parseFloat(counter.getAttribute('data-count'));
+                    const current = parseFloat(counter.innerText) || 0;
+                    
+                    const increment = target / speed;
+                    if (current < target) {
+                        counter.innerText = Math.ceil(current + increment);
+                        setTimeout(updateCount, 10);
+                    } else {
+                        counter.innerText = target;
+                    }
+                };
+                updateCount();
+            };
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        animateCounter(entry.target);
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.5 });
+            
+            counters.forEach(counter => observer.observe(counter));
+        });
+        </script>
+        
+        <script>
+            jQuery(document).ready(function ($) {
+                'use strict';
+                function equalHeight() {
+                    $('.page-content.column-img-bkg *[class*="custom-col-padding"]').each(function () {
+                        var maxHeight = $(this).outerHeight();
+                        $('.page-content.column-img-bkg *[class*="img-bkg"]').height(maxHeight);
+                    });
+                };
+                $(document).ready(equalHeight);
+                $(window).resize(equalHeight);
+                $('#client-carousel').owlCarousel({
+                    items: 6,
+                    loop: true,
+                    margin: 30,
+                    responsiveClass: true,
+                    mouseDrag: true,
+                    dots: false,
+                    responsive: {
+                        0: { items: 2 },
+                        600: { items: 3 },
+                        1000: { items: 6 }
+                    }
+                });
+            });
+        </script>
+        <!-- Only essential scripts -->
+<script src="js/jquery-2.1.4.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.srcipts.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
+<script src="js/jquery.ui.map.full.min.js"></script>
+<script src="js/jquery.dlmenu.min.js"></script>
+<script src="js/include.js"></script>
+
+    </body>
+</html>

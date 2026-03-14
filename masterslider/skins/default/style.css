@@ -175,3 +175,53 @@ only screen and (                min-resolution: 2dppx) {
 	}
 	
 }
+/* Custom Image Size Classes - Added via terminal */
+.img-size-slider { width: 1920px; height: 854px; object-fit: cover; }
+.img-size-box { width: 360px; height: 216px; object-fit: cover; }
+.img-size-hero { width: 1200px; height: 400px; object-fit: cover; }
+.img-size-small { width: 220px; height: 132px; object-fit: cover; }
+
+/* Responsive image container */
+.img-responsive {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ===== IMAGE CONTROLS ===== */
+/* Size Classes */
+.img-size-slider { width: 1920px; height: 854px; object-fit: cover; }
+.img-size-box { width: 360px; height: 216px; object-fit: cover; }
+.img-size-hero { width: 1200px; height: 400px; object-fit: cover; }
+
+/* Zoom Classes */
+.zoom-80 { transform: scale(0.8); }
+.zoom-90 { transform: scale(0.9); }
+.zoom-100 { transform: scale(1.0); }
+.zoom-110 { transform: scale(1.1); }
+.zoom-120 { transform: scale(1.2); }
+.zoom-130 { transform: scale(1.3); }
+.zoom-150 { transform: scale(1.5); }
+.zoom-200 { transform: scale(2.0); }
+
+/* Zoom Origins */
+.zoom-center { transform-origin: center center; }
+.zoom-top { transform-origin: center top; }
+.zoom-left { transform-origin: left center; }
+.zoom-right { transform-origin: right center; }
+
+/* Pre-made Combinations */
+.slider-zoomed { 
+  width: 1920px; 
+  height: 854px; 
+  object-fit: cover; 
+  transform: scale(1.2);
+  transform-origin: center center;
+}
+.box-standard {
+  width: 360px;
+  height: 216px;
+  object-fit: cover;
+}
+
+/* Responsive */
+.img-responsive { max-width: 100%; height: auto; }

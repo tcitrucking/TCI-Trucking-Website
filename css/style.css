@@ -1161,15 +1161,15 @@ a.download-link span i{
 }
 
 .img-bkg01{
-    background-image: url('../img/pics/img-bkg01.jpg');
+    background-color: #D4B895; background-image: none;
 }
 
 .img-bkg02{
-    background-image: url('../img/pics/img-bkg02.jpg');
+    background-color: #D4B895; background-image: none;
 }
 
 .img-bkg03{
-    background-image: url('../img/pics/img-bkg03.jpg');
+    background-color: #D4B895; background-image: none;
 }
 
 *[class*="img-bkg"]{
@@ -1181,23 +1181,23 @@ a.download-link span i{
 }
 
 .custom-bkg.bkg-light-blue{
-    background-color: #f4fcfc;
+    background-color: #D4B895;
 }
 
 .custom-bkg.bkg-dark-blue{
-    background-color: #2c3741;
+    background-color: #D4B895;
 }
 
 .custom-bkg.bkg-dark-blue.transparent01{
-    background-color: rgba(37, 39, 46, 0.7);
+    background-color: #D4B895;
 }
 
 .custom-bkg.bkg-dark-blue.transparent02{
-    background-color: rgba(37, 39, 46, 0.8);
+    background-color: #D4B895;
 }
 
 .custom-bkg.bkg-dark-blue.transparent03{
-    background-color: rgba(37, 39, 46, 0.9);
+    background-color: #D4B895;
 }
 
 .page-title-style01 + .page-content.custom-bkg,
@@ -1214,23 +1214,23 @@ a.download-link span i{
 }
 
 .parallax01{
-    background-image: url('../img/pics/parallax01.jpg');
+    background-color: #D4B895; background-image: none;
 }
 
 .parallax02{
-    background-image: url('../img/pics/parallax02.jpg');
+    background-color: #D4B895; background-image: none;
 }
 
 .parallax03{
-    background-image: url('../img/pics/parallax03.jpg');
+    background-color: #D4B895; background-image: none;
 }
 
 .parallax04{
-    background-image: url('../img/pics/parallax04.jpg');
+    background-color: #D4B895; background-image: none;
 }
 
 .parallax05{
-    background-image: url('../img/pics/parallax05.jpg');
+    background-color: #D4B895; background-image: none;
 }
 
 .page-content.dark h1,
@@ -1406,7 +1406,6 @@ blockquote{
     font-weight: 700;
     position: relative;
     overflow: hidden;
-    display: inline-block;
     backface-visibility: hidden;
     float: right;
 
@@ -1521,7 +1520,7 @@ blockquote{
 
     display: block;
     margin: 0 auto;
-    vertical-align: middle;
+    
 }
 
 .clients-li li:hover img{
@@ -2392,7 +2391,7 @@ blockquote{
     width: 60px;
     display: block;
     margin: 0 auto;
-    vertical-align: middle;
+    
     height: 60px;
     position: relative;
     top: 20px;
@@ -4028,7 +4027,4 @@ blockquote{
     -moz-border-radius: 4px;
 }
 
-
-/* Ensure only the main freight services element displays */
-.ms-slide .ms-layer:not(#freight-main) {
-    display: none !important;
+/* OVERRIDE ALL BLUE BACKGROUNDS */ .page-content.dark, .parallax01, .parallax02, .parallax03, .parallax04, .parallax05, .img-bkg01, .img-bkg02, .img-bkg03, .custom-bkg.bkg-dark-blue, .custom-bkg.bkg-light-blue, .pt-bkg01, .pt-bkg02, .pt-bkg03, .pt-bkg04, .pt-bkg05, .pt-bkg06, .pt-bkg07, .pt-bkg08, .pt-bkg09, .pt-bkg10, .pt-bkg11, .pt-bkg12, .pt-bkg13, .pt-bkg14, .pt-bkg15, .pt-bkg16 { background-color: #D4B895; background-image: none; }
