@@ -4181,3 +4181,81 @@ blockquote{
         -webkit-overflow-scrolling: touch !important;
     }
 }
+
+
+/* ==========================================================================
+    EXTREME FIX: KILL MOBILE MENU COMPLETELY
+    ========================================================================= */
+@media (max-width: 991px) {
+    /* Remove mobile menu button */
+    .dl-menuwrapper,
+    .dl-trigger,
+    #dl-menu,
+    button.dl-trigger {
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+        pointer-events: none !important;
+        position: absolute !important;
+        left: -9999px !important;
+    }
+    
+    /* Force desktop navigation to show */
+    .navbar-collapse {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        width: auto !important;
+        height: auto !important;
+        overflow: visible !important;
+        float: right !important;
+        background: transparent !important;
+        position: static !important;
+    }
+    
+    .navbar-nav {
+        display: block !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        float: left !important;
+    }
+    
+    .navbar-nav > li {
+        display: block !important;
+        float: left !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    
+    .navbar-nav > li > a {
+        display: block !important;
+        padding: 15px 20px !important;
+        color: #333 !important;
+        font-size: 13px !important;
+        font-weight: 700 !important;
+        text-transform: uppercase !important;
+        line-height: 48px !important;
+        background: transparent !important;
+        border: none !important;
+    }
+    
+    /* Force horizontal scroll */
+    .container {
+        width: 1170px !important;
+        max-width: none !important;
+        overflow-x: visible !important;
+    }
+    
+    body {
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch !important;
+        min-width: 1170px !important;
+    }
+    
+    /* Hide any mobile menu remnants */
+    .navbar-toggle,
+    .collapsed,
+    [data-toggle="collapse"] {
+        display: none !important;
+    }
+}
