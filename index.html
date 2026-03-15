@@ -153,7 +153,72 @@
         display: none !important;
     }
 }
+/* Footer mobile optimizations */
+@media (max-width: 767px) {
+    .footer-widget-container {
+        margin-bottom: 30px;
+    }
+    
+    /* Make the "WHY DRIVERS CHOOSE TCI" section more compact */
+    .footer-widget-container:first-child {
+        text-align: center;
+    }
+    
+    .footer-widget-container:first-child p {
+        font-size: 14px;
+        margin-bottom: 8px;
+        line-height: 1.4;
+    }
+    
+    /* Style for "Email Us to learn more!" */
+    .footer-widget-container:first-child p:first-of-type {
+        color: #bcc0c4 !important;
+        font-size: 16px;
+        margin: 15px 0 10px 0;
+    }
+    
+    /* Center the form */
+    .footer-widget-container:first-child form {
+        max-width: 280px;
+        margin: 0 auto;
+    }
+    
+    /* Adjust logo size */
+    .footer-widget-container .icon-container img {
+        max-width: 280px !important;
+        margin: 0 auto;
+        display: block;
+    }
+    
+    /* Contact section mobile */
+    .footer-widget-container:last-child {
+        text-align: center;
+    }
+    
+    .footer-widget-container:last-child address,
+    .footer-widget-container:last-child .text-big,
+    .footer-widget-container:last-child p {
+        margin-bottom: 5px;
+    }
+    
+    /* Copyright text */
+    .copyright-container p {
+        font-size: 11px;
+        line-height: 1.5;
+        padding: 0 10px;
+    }
+}
 
+/* For very small phones */
+@media (max-width: 480px) {
+    .footer-widget-container:first-child p {
+        font-size: 13px;
+    }
+    
+    .footer-widget-container:first-child form {
+        max-width: 240px;
+    }
+}
 </style>
 <script>
 function toggleMobileMenu() {
