@@ -161,7 +161,7 @@
     
     /* Make the "WHY DRIVERS CHOOSE TCI" section more compact */
     .footer-widget-container:first-child {
-        text-align: center;
+        text-align: left;  /* Changed from center to left */
     }
     
     .footer-widget-container:first-child p {
@@ -174,13 +174,31 @@
     .footer-widget-container:first-child p:first-of-type {
         color: #bcc0c4 !important;
         font-size: 16px;
-        margin: 15px 0 10px 0;
+        margin: 15px 0 5px 0;
     }
     
-    /* Center the form */
+    /* Make the email form container smaller and left-aligned */
     .footer-widget-container:first-child form {
-        max-width: 280px;
-        margin: 0 auto;
+        max-width: 220px;
+        margin: 5px 0;  /* Left aligned, not centered */
+    }
+    
+    /* Make the input field smaller */
+    .footer-widget-container:first-child input#newsletterEmail {
+        height: 36px !important;
+        padding: 8px 40px 8px 10px !important;
+        font-size: 12px !important;
+    }
+    
+    /* Make the envelope button smaller */
+    .footer-widget-container:first-child button#newsletterSubmitBtn {
+        width: 36px !important;
+        height: 36px !important;
+    }
+    
+    /* Make the envelope icon smaller */
+    .footer-widget-container:first-child button#newsletterSubmitBtn i {
+        font-size: 14px !important;
     }
     
     /* Adjust logo size */
@@ -192,7 +210,7 @@
     
     /* Contact section mobile */
     .footer-widget-container:last-child {
-        text-align: center;
+        text-align: left;  /* Changed from center to left */
     }
     
     .footer-widget-container:last-child address,
@@ -206,6 +224,7 @@
         font-size: 11px;
         line-height: 1.5;
         padding: 0 10px;
+        text-align: center;
     }
 }
 
@@ -216,7 +235,22 @@
     }
     
     .footer-widget-container:first-child form {
-        max-width: 240px;
+        max-width: 180px;
+    }
+    
+    .footer-widget-container:first-child input#newsletterEmail {
+        height: 32px !important;
+        padding: 6px 35px 6px 8px !important;
+        font-size: 11px !important;
+    }
+    
+    .footer-widget-container:first-child button#newsletterSubmitBtn {
+        width: 32px !important;
+        height: 32px !important;
+    }
+    
+    .footer-widget-container .icon-container img {
+        max-width: 200px !important;  /* Slightly smaller logo on very small phones */
     }
 }
 </style>
