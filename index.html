@@ -157,17 +157,19 @@
 @media (max-width: 767px) {
     .footer-widget-container {
         margin-bottom: 30px;
+        text-align: center !important;  /* Center all footer content */
     }
     
-    /* Make the "WHY DRIVERS CHOOSE TCI" section more compact */
+    /* Make the "WHY DRIVERS CHOOSE TCI" section centered */
     .footer-widget-container:first-child {
-        text-align: left;  /* Changed from center to left */
+        text-align: center !important;
     }
     
     .footer-widget-container:first-child p {
         font-size: 14px;
         margin-bottom: 8px;
         line-height: 1.4;
+        text-align: center !important;
     }
     
     /* Style for "Email Us to learn more!" */
@@ -175,12 +177,13 @@
         color: #bcc0c4 !important;
         font-size: 16px;
         margin: 15px 0 5px 0;
+        text-align: center !important;
     }
     
-    /* Make the email form container smaller and left-aligned */
+    /* Center the form */
     .footer-widget-container:first-child form {
         max-width: 220px;
-        margin: 5px 0;  /* Left aligned, not centered */
+        margin: 5px auto !important;  /* Changed from '5px 0' to '5px auto' to center */
     }
     
     /* Make the input field smaller */
@@ -201,22 +204,28 @@
         font-size: 14px !important;
     }
     
-    /* Adjust logo size */
+    /* Center the logo */
     .footer-widget-container .icon-container img {
         max-width: 280px !important;
-        margin: 0 auto;
+        margin: 0 auto !important;
         display: block;
     }
     
-    /* Contact section mobile */
+    /* Contact section centered */
     .footer-widget-container:last-child {
-        text-align: left;  /* Changed from center to left */
+        text-align: center !important;
     }
     
     .footer-widget-container:last-child address,
     .footer-widget-container:last-child .text-big,
     .footer-widget-container:last-child p {
         margin-bottom: 5px;
+        text-align: center !important;
+    }
+    
+    /* Center the title */
+    .footer-widget-container .title h3 {
+        text-align: center !important;
     }
     
     /* Copyright text */
@@ -236,6 +245,7 @@
     
     .footer-widget-container:first-child form {
         max-width: 180px;
+        margin: 5px auto !important;
     }
     
     .footer-widget-container:first-child input#newsletterEmail {
@@ -250,7 +260,7 @@
     }
     
     .footer-widget-container .icon-container img {
-        max-width: 200px !important;  /* Slightly smaller logo on very small phones */
+        max-width: 200px !important;
     }
 }
 </style>
