@@ -903,7 +903,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
-</script>
+    </script>
             <a href="#" class="scroll-up">Scroll</a>
         </div><!-- #footer-wrapper end -->
         <script src="js/jquery-2.1.4.min.js"></script><!-- jQuery library -->
@@ -914,127 +914,134 @@ document.addEventListener('DOMContentLoaded', function() {
         <script src="js/jquery.matchHeight-min.js"></script><!-- for columns with background image -->
         <script src="js/jquery.dlmenu.min.js"></script><!-- for responsive menu -->
         <script src="js/include.js"></script><!-- custom js functions -->
+        
+        <!-- Your mobile menu JavaScript -->
         <script>
-            /* <![CDATA[ */
-            jQuery(document).ready(function ($) {
-                'use strict';
-                function equalHeight() {
-                    $('.page-content.column-img-bkg *[class*="custom-col-padding"]').each(function () {
-                        var maxHeight = $(this).outerHeight();
-                        $('.page-content.column-img-bkg *[class*="img-bkg"]').height(maxHeight);
-                    });
-                };
-                $(document).ready(equalHeight);
-                $(window).resize(equalHeight);
-                // MASTER SLIDER START 
-                var slider = new MasterSlider();
-                slider.setup('masterslider', {
-                    width: 1140, // slider standard width
-                    height: 854, // slider standard height
-                    space: 0,
-                    speed: 50,
-                    layout: "fullwidth",
-                    centerControls: false,
-                    loop: true,
-                    autoplay: true
-                            // more slider options goes here...
-                            // check slider options section in documentation for more options.
-                });
-                // adds Arrows navigation control to the slider.
-                slider.control('arrows');
-                // CLIENTS CAROUSEL START 
-                $('#client-carousel').owlCarousel({
-                    items: 6,
-                    loop: true,
-                    margin: 30,
-                    responsiveClass: true,
-                    mouseDrag: true,
-                    dots: false,
-                    responsive: {
-                        0: {
-                            items: 2,
-                            nav: true,
-                            loop: true,
-                            autoplay: true,
-                            autoplayTimeout: 3000,
-                            autoplayHoverPause: true,
-                            responsiveClass: true
-                        },
-                        600: {
-                            items: 3,
-                            nav: true,
-                            loop: true,
-                            autoplay: true,
-                            autoplayTimeout: 3000,
-                            autoplayHoverPause: true,
-                            responsiveClass: true
-                        },
-                        1000: {
-                            items: 6,
-                            nav: true,
-                            loop: true,
-                            autoplay: true,
-                            autoplayTimeout: 3000,
-                            autoplayHoverPause: true,
-                            responsiveClass: true,
-                            mouseDrag: true
-                        }
-                    }
-                });
-                // TESTIMONIAL CAROUSELS START
-                $('#testimonial-carousel').owlCarousel({
-                    items: 1,
-                    loop: true,
-                    margin: 30,
-                    responsiveClass: true,
-                    mouseDrag: true,
-                    dots: false,
-                    autoheight: true,
-                    responsive: {
-                        0: {
-                            items: 1,
-                            nav: true,
-                            loop: true,
-                            autoplay: true,
-                            autoplayTimeout: 3000,
-                            autoplayHoverPause: true,
-                            responsiveClass: true,
-                            autoHeight: true
-                        },
-                        600: {
-                            items: 1,
-                            nav: true,
-                            loop: true,
-                            autoplay: true,
-                            autoplayTimeout: 3000,
-                            autoplayHoverPause: true,
-                            responsiveClass: true,
-                            autoHeight: true
-                        },
-                        1000: {
-                            items: 1,
-                            nav: true,
-                            loop: true,
-                            autoplay: true,
-                            autoplayTimeout: 3000,
-                            autoplayHoverPause: true,
-                            responsiveClass: true,
-                            mouseDrag: true,
-                            autoHeight: true
-                        }
-                    }
-                });
-            });
-            /* ]]> */
-        </script>
-    </body>
-</html>
+        // Ensure menu is closed when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            const menu = document.getElementById('mobileMenu');
+            if (menu) menu.classList.remove('show');
+        });
 
-<script>
-    jQuery(document).ready(function ($) {
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            if (menu) menu.classList.toggle('show');
+        }
+
+        function closeMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            if (menu) menu.classList.remove('show');
+            
+            document.querySelectorAll('.mobile-submenu').forEach(sub => {
+                sub.style.display = 'none';
+            });
+        }
+
+        function toggleSubmenu(event, submenuId) {
+            event.preventDefault();
+            const submenu = document.getElementById(submenuId);
+            if (!submenu) return;
+            
+            document.querySelectorAll('.mobile-submenu').forEach(sub => {
+                sub.style.display = 'none';
+            });
+            
+            submenu.style.display = submenu.style.display === 'block' ? 'none' : 'block';
+        }
+        </script>
+    
+        <!-- DL Menu initialization -->
+        <script>
+        jQuery(document).ready(function ($) {
+            if ($("#dl-menu").length) {
+                $("#dl-menu").dlmenu();
+
+        };
+
+    </script>
+
+    <!-- DL Menu initialization -->
+    <script>
+    jQuery(document).ready(function($) {
         if ($("#dl-menu").length) {
             $("#dl-menu").dlmenu();
         }
     });
+    </script>
+
+    <!-- jQuery and other scripts -->
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.srcipts.min.js"></script>
+    <script src="owl-carousel/owl.carousel.min.js"></script>
+    <script src="masterslider/masterslider.min.js"></script>
+    <script src="js/jquery.matchHeight-min.js"></script>
+    <script src="js/jquery.dlmenu.min.js"></script>
+    <script src="js/include.js"></script>
+
+    <!-- Newsletter Form JavaScript -->
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const form = document.getElementById("newsletterForm");
+        if (form) {
+            form.addEventListener("submit", async function(e) {
+                e.preventDefault();
+                const emailInput = document.getElementById("newsletterEmail");
+                const messageDiv = document.getElementById("newsletterMessage");
+                const submitBtn = document.getElementById("newsletterSubmitBtn");
+                const email = emailInput.value.trim();
+                
+                if (!email || !email.includes("@") || !email.includes(".")) {
+                    messageDiv.style.display = "block";
+                    messageDiv.style.backgroundColor = "#f8d7da";
+                    messageDiv.style.color = "#721c24";
+                    messageDiv.innerHTML = "❌ Please enter a valid email address.";
+                    return;
+                }
+                
+                messageDiv.style.display = "block";
+                messageDiv.style.backgroundColor = "#f0f0f0";
+                messageDiv.style.color = "#333";
+                messageDiv.innerHTML = "⏳ Subscribing...";
+                submitBtn.disabled = true;
+                
+                const formData = new FormData(form);
+                
+                try {
+                    const response = await fetch(form.action, {
+                        method: "POST",
+                        body: formData,
+                        headers: { "Accept": "application/json" }
+                    });
+                    
+                    if (response.ok) {
+                        messageDiv.style.backgroundColor = "#d4edda";
+                        messageDiv.style.color = "#155724";
+                        messageDiv.innerHTML = "✓ Thanks for subscribing!";
+                        form.reset();
+                        setTimeout(() => messageDiv.style.display = "none", 5000);
+                    } else {
+                        const data = await response.json();
+                        messageDiv.style.backgroundColor = "#f8d7da";
+                        messageDiv.style.color = "#721c24";
+                        messageDiv.innerHTML = "❌ " + (data.errors ? data.errors.map(error => error.message).join(", ") : "Something went wrong.");
+                    }
+                } catch (error) {
+                    messageDiv.style.display = "block";
+                    messageDiv.style.backgroundColor = "#f8d7da";
+                    messageDiv.style.color = "#721c24";
+                    messageDiv.innerHTML = "❌ Network error. Please try again.";
+                } finally {
+                    submitBtn.disabled = false;
+                }
+            });
+        }
+    });
+    </script>
+
+</body>
+
 </script>
 
+</body>
+</html>
