@@ -1182,20 +1182,18 @@ jQuery(document).ready(function($) {
 </script>
 <script>
 jQuery(document).ready(function($) {
-    // Initialize testimonial carousel with loop
+    // Initialize testimonial carousel
     if ($("#testimonial-carousel").length) {
         $("#testimonial-carousel").owlCarousel({
             items: 1,
-            autoPlay: 10000,        // Changes every 10 seconds
-            loop: true,              // Enables infinite looping
-            navigation: true,
-            pagination: true,
-            slideSpeed: 300,
-            paginationSpeed: 400,
-            singleItem: true,
-            transitionStyle: "fade",
-            stopOnHover: true,       // Pauses when mouse hovers
-            autoHeight: true
+            autoplay: true,
+            autoplayTimeout: 3000,
+            autoplayHoverPause: true,
+            loop: true,
+            nav: true,
+            navText: ["←", "→"],  // Simple text arrows
+            dots: true,
+            smartSpeed: 700
         });
     }
 });
