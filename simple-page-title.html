@@ -18,6 +18,510 @@
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,400,800,700,600' rel='stylesheet' type='text/css'>
         <!-- Font icons -->
         <link rel="stylesheet" href="icon-fonts/font-awesome-4.3.0/css/font-awesome.min.css"/><!-- Fontawesome icons css -->
+        <style>
+    /* Mobile Menu Overlay Styles */
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 80%;
+    max-width: 400px;
+    height: 100%;
+    background: #1a1a1a;
+    z-index: 10001;
+    transition: left 0.3s ease;
+    overflow-y: auto;
+    padding: 60px 20px 30px;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.3);
+}
+
+.mobile-menu.show {
+    left: 0;
+}
+
+.mobile-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mobile-menu > ul > li {
+    margin-bottom: 5px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.mobile-menu > ul > li > a {
+    display: block;
+    padding: 15px 10px;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.mobile-menu > ul > li > a:hover {
+    background: #D4B895;
+    color: black;
+}
+
+/* Submenu styles */
+.mobile-submenu {
+    display: none;
+    list-style: none;
+    padding: 0;
+    margin: 0 0 10px 0;
+    background: rgba(255,255,255,0.05);
+    border-radius: 5px;
+}
+
+.mobile-submenu li {
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.mobile-submenu li:last-child {
+    border-bottom: none;
+}
+
+.mobile-submenu li a {
+    display: block;
+    padding: 12px 20px 12px 30px;
+    color: #ddd;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.mobile-submenu li a:hover {
+    background: #D4B895;
+    color: black;
+}
+
+.mobile-menu-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 10002;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mobile-menu-close:hover {
+    color: #D4B895;
+}
+
+.mobile-menu-button {
+    position: relative;
+    margin: 10px auto;
+    text-align: center;
+    width: 100%;
+}
+
+.mobile-menu-button button {
+    background: #D4B895;
+    color: black;
+    border: none;
+    padding: 12px 40px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Hide desktop menu on mobile */
+@media (max-width: 991px) {
+    .navbar-collapse, #dl-menu, .dl-menuwrapper, .dl-trigger {
+        display: none !important;
+    }
+}
+
+/* Hide mobile menu on desktop */
+@media (min-width: 992px) {
+    .mobile-menu-button, .mobile-menu {
+        display: none !important;
+    }
+}
+/* Footer mobile optimizations */
+@media (max-width: 767px) {
+    .footer-widget-container {
+        margin-bottom: 30px;
+        text-align: center !important;  /* Center all footer content */
+    }
+    
+    /* Make the "WHY DRIVERS CHOOSE TCI" section centered */
+    .footer-widget-container:first-child {
+        text-align: center !important;
+    }
+    
+    .footer-widget-container:first-child p {
+        font-size: 14px;
+        margin-bottom: 8px;
+        line-height: 1.4;
+        text-align: center !important;
+    }
+    
+    /* Style for "Email Us to learn more!" */
+    .footer-widget-container:first-child p:first-of-type {
+        color: #bcc0c4 !important;
+        font-size: 16px;
+        margin: 15px 0 5px 0;
+        text-align: center !important;
+    }
+    
+    /* Center the form */
+    .footer-widget-container:first-child form {
+        max-width: 220px;
+        margin: 5px auto !important;  /* Changed from '5px 0' to '5px auto' to center */
+    }
+    
+    /* Make the input field smaller */
+    .footer-widget-container:first-child input#newsletterEmail {
+        height: 36px !important;
+        padding: 8px 40px 8px 10px !important;
+        font-size: 12px !important;
+    }
+    
+    /* Make the envelope button smaller */
+    .footer-widget-container:first-child button#newsletterSubmitBtn {
+        width: 36px !important;
+        height: 36px !important;
+    }
+    
+    /* Make the envelope icon smaller */
+    .footer-widget-container:first-child button#newsletterSubmitBtn i {
+        font-size: 14px !important;
+    }
+    
+    /* Center the logo */
+    .footer-widget-container .icon-container img {
+        max-width: 280px !important;
+        margin: 0 auto !important;
+        display: block;
+    }
+    
+    /* Contact section centered */
+    .footer-widget-container:last-child {
+        text-align: center !important;
+    }
+    
+    .footer-widget-container:last-child address,
+    .footer-widget-container:last-child .text-big,
+    .footer-widget-container:last-child p {
+        margin-bottom: 5px;
+        text-align: center !important;
+    }
+    
+    /* Center the title */
+    .footer-widget-container .title h3 {
+        text-align: center !important;
+    }
+    
+    /* Copyright text */
+    .copyright-container p {
+        font-size: 11px;
+        line-height: 1.5;
+        padding: 0 10px;
+        text-align: center;
+    }
+}
+
+/* For very small phones */
+@media (max-width: 480px) {
+    .footer-widget-container:first-child p {
+        font-size: 13px;
+    }
+    
+    .footer-widget-container:first-child form {
+        max-width: 180px;
+        margin: 5px auto !important;
+    }
+    
+    .footer-widget-container:first-child input#newsletterEmail {
+        height: 32px !important;
+        padding: 6px 35px 6px 8px !important;
+        font-size: 11px !important;
+    }
+    
+    .footer-widget-container:first-child button#newsletterSubmitBtn {
+        width: 32px !important;
+        height: 32px !important;
+    }
+    
+    .footer-widget-container .icon-container img {
+        max-width: 200px !important;
+    }
+}
+</style>
+<script>
+function toggleMobileMenu() {
+    const menu = document.getElementById('mobileMenu');
+    menu.classList.toggle('show');
+}
+
+function closeMobileMenu() {
+    document.getElementById('mobileMenu').classList.remove('show');
+    // Close all submenus when closing main menu
+    document.querySelectorAll('.mobile-submenu').forEach(sub => {
+        sub.style.display = 'none';
+    });
+}
+
+function toggleSubmenu(event, submenuId) {
+    event.preventDefault();
+    const submenu = document.getElementById(submenuId);
+    
+    // Close all other submenus first
+    document.querySelectorAll('.mobile-submenu').forEach(sub => {
+        sub.style.display = 'none';
+    });
+    
+    // Toggle the clicked one
+    submenu.style.display = submenu.style.display === 'block' ? 'none' : 'block';
+}
+
+// Close menu when clicking outside (optional)
+document.addEventListener('click', function(e) {
+    const menu = document.getElementById('mobileMenu');
+    const menuButton = document.querySelector('.mobile-menu-button');
+    
+    if (menu.classList.contains('show') && 
+        !menu.contains(e.target) && 
+        !menuButton.contains(e.target)) {
+        closeMobileMenu();
+    }
+});
+</script>
+        <!-- NEW VERTICAL SPLIT DESIGN -->
+        <style>
+            /* Vertical Split Layout */
+            .vertical-split-section {
+                position: relative;
+                min-height: 800px;
+                display: flex;
+                margin: 40px 0;
+                overflow: hidden;
+            }
+            
+            .split-left {
+                flex: 1;
+                background-color: #000000;
+                color: white;
+                padding: 60px 40px;
+                position: relative;
+                display: flex;
+                align-items: center;
+            }
+            
+            .split-left::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 4px;
+                height: 100%;
+                background: linear-gradient(to bottom, #D4B895, #ffffff, #D4B895);
+            }
+            
+            .split-right {
+                flex: 1;
+                background-color: #ffffff;
+                color: #333333;
+                padding: 60px 40px;
+                display: flex;
+                align-items: center;
+            }
+            
+            .split-content {
+                max-width: 500px;
+                margin: 0 auto;
+            }
+            
+            /* Left side styles (black) */
+            .split-left .section-title {
+                font-size: 14px;
+                text-transform: uppercase;
+                letter-spacing: 3px;
+                color: #D4B895;
+                margin-bottom: 20px;
+                font-weight: 600;
+            }
+            
+            .split-left h2 {
+                font-size: 48px;
+                font-weight: 800;
+                color: white;
+                margin-bottom: 30px;
+                line-height: 1.2;
+                font-family: 'Raleway', sans-serif;
+            }
+            
+            .split-left h2 span {
+                color: #D4B895;
+                display: block;
+                font-size: 32px;
+                font-weight: 400;
+                margin-top: 10px;
+            }
+            
+            .split-left .highlight-text {
+                font-size: 18px;
+                color: #D4B895;
+                margin-bottom: 25px;
+                font-weight: 600;
+                border-left: 3px solid #D4B895;
+                padding-left: 20px;
+            }
+            
+            .split-left p {
+                color: #cccccc;
+                line-height: 1.8;
+                margin-bottom: 30px;
+            }
+            
+            /* Stats Container (in left side) */
+            .stats-container-left {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 30px;
+                margin-top: 40px;
+            }
+            
+            .stat-item-left {
+                text-align: center;
+            }
+            
+            .stat-number-left {
+                font-size: 42px;
+                font-weight: 800;
+                color: #D4B895;
+                line-height: 1;
+                margin-bottom: 10px;
+                font-family: 'Raleway', sans-serif;
+            }
+            
+            .stat-label-left {
+                font-size: 14px;
+                color: white;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                font-weight: 600;
+            }
+            
+            /* Right side styles (white) */
+            .split-right .section-subtitle {
+                font-size: 14px;
+                text-transform: uppercase;
+                letter-spacing: 3px;
+                color: #D4B895;
+                margin-bottom: 15px;
+                font-weight: 600;
+            }
+            
+            .split-right h3 {
+                font-size: 30px;
+                font-weight: 700;
+                color: #000000;
+                margin-bottom: 25px;
+                font-family: 'Raleway', sans-serif;
+                position: relative;
+                padding-bottom: 15px;
+            }
+            
+            .split-right h3::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 60px;
+                height: 3px;
+                background-color: #D4B895;
+            }
+            
+            .split-right .feature-list {
+                margin-top: 30px;
+            }
+            
+            .split-right .feature-item {
+                display: flex;
+                gap: 15px;
+                margin-bottom: 25px;
+                align-items: flex-start;
+            }
+            
+            .feature-icon {
+                width: 40px;
+                height: 40px;
+                background-color: #D4B895;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: black;
+                font-size: 18px;
+                flex-shrink: 0;
+            }
+            
+            .feature-text h4 {
+                font-size: 18px;
+                font-weight: 700;
+                color: #000000;
+                margin-bottom: 5px;
+            }
+            
+            .feature-text p {
+                color: #666;
+                line-height: 1.6;
+                margin: 0;
+            }
+            
+            /* Responsive */
+            @media (max-width: 992px) {
+                .vertical-split-section {
+                    flex-direction: column;
+                }
+                
+                .split-left::after {
+                    width: 100%;
+                    height: 4px;
+                    top: auto;
+                    bottom: 0;
+                    right: auto;
+                    background: linear-gradient(to right, #D4B895, #ffffff, #D4B895);
+                }
+                
+                .split-left h2 {
+                    font-size: 42px;
+                }
+            }
+            
+            @media (max-width: 768px) {
+                .split-left, .split-right {
+                    padding: 40px 20px;
+                }
+                
+                .split-left h2 {
+                    font-size: 36px;
+                }
+                
+                .stats-container-left {
+                    grid-template-columns: 1fr;
+                }
+            }
+            
+            /* Remove gap from page title */
+            .page-title-style01 {
+                margin-bottom: 0 !important;
+                padding-bottom: 0 !important;
+            }
+        </style>
     </head>
     <body>
         <div class="header-wrapper">
@@ -135,6 +639,43 @@
                                             </div><!-- #dl-menu end -->
                                         </div><!-- MAIN NAVIGATION END -->
                                     </nav><!-- .navbar.navbar-default end -->
+                                    <!-- MOBILE MENU - OVERLAY STYLE -->
+<div class="mobile-menu-button">
+    <button onclick="toggleMobileMenu()">☰ MENU</button>
+</div>
+<div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-close" onclick="closeMobileMenu()">✕</div>
+    <ul>
+        <li>
+            <a href="#" onclick="toggleSubmenu(event, 'home-submenu-mobile')">HOME</a>
+            <ul class="mobile-submenu" id="home-submenu-mobile">
+                <li><a href="index.html" onclick="closeMobileMenu()">Home</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#" onclick="toggleSubmenu(event, 'about-submenu-mobile')">ABOUT</a>
+            <ul class="mobile-submenu" id="about-submenu-mobile">
+                <li><a href="about01.html" onclick="closeMobileMenu()">Who We Are</a></li>
+                <li><a href="simple-page-title.html" onclick="closeMobileMenu()">Meet the Team</a></li>
+                <li><a href="driver-application.html" onclick="closeMobileMenu()">Online Driver Application</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#" onclick="toggleSubmenu(event, 'services-submenu-mobile')">SERVICES</a>
+            <ul class="mobile-submenu" id="services-submenu-mobile">
+                <li><a href="services01.html" onclick="closeMobileMenu()">What We Offer</a></li>
+                <li><a href="consulting-services.html" onclick="closeMobileMenu()">Frequently Asked Questions</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#" onclick="toggleSubmenu(event, 'contact-submenu-mobile')">CONTACT</a>
+            <ul class="mobile-submenu" id="contact-submenu-mobile">
+                <li><a href="contact-simple.html" onclick="closeMobileMenu()">Contact Us</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+                           
                                 </div><!-- .col-md-12 end -->
                             </div><!-- .row end -->
                         </div><!-- .main-nav end -->
