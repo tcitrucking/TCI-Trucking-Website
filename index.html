@@ -1239,6 +1239,26 @@ jQuery(document).ready(function($) {
         transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
     </style>
+<style>
+/* Make all service boxes equal height */
+.service-feature-box {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.service-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.service-body p {
+    flex: 1;
+}
+
+/* OR use JavaScript/jQuery to match heights */
+</style>
 
 </body>
 </html>
