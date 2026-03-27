@@ -1260,5 +1260,29 @@ jQuery(document).ready(function($) {
 /* OR use JavaScript/jQuery to match heights */
 </style>
 
+<style>
+/* Make all service boxes equal height */
+.service-feature-box {
+    height: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+.service-body {
+    flex: 1 !important;
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+.service-body p {
+    flex: 1 !important;
+}
+
+/* Make all columns the same height */
+.col-md-4, .col-sm-4 {
+    display: flex !important;
+}
+</style>
+
 </body>
 </html>
