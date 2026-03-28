@@ -429,9 +429,6 @@ document.addEventListener('click', function(e) {
                                         </div><!-- #dl-menu end -->
                                     </div><!-- MAIN NAVIGATION END -->
                                  </nav><!-- .navbar.navbar-default end -->
-                                                                </nav><!-- .navbar.navbar-default end -->
-                                
-                                                                </nav><!-- .navbar.navbar-default end -->
                                 
                                 <!-- MOBILE MENU - OVERLAY STYLE -->
 <div class="mobile-menu-button">
@@ -1238,7 +1235,7 @@ jQuery(document).ready(function($) {
     }
     </style>
 <style>
-/* Make all service boxes equal height */
+    /* Make all service boxes equal height */
 .service-feature-box {
     min-height: 520px !important;
     height: 100% !important;
@@ -1290,6 +1287,7 @@ jQuery(document).ready(function($) {
     transition: transform 0.5s ease !important;
     width: 100% !important;
 }
+
 .read-more-link {
     color: #D4B895 !important;
     text-decoration: none !important;
@@ -1302,9 +1300,41 @@ jQuery(document).ready(function($) {
 .read-more-link:hover {
     color: #c0a07a !important;
 }
+
 .service-media {
     overflow: hidden !important;
     border-radius: 12px 12px 0 0 !important;
+}
+
+/* FIX: Remove white space on right side */
+* {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+html, body {
+    overflow-x: hidden !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.container, .container-fluid {
+    overflow-x: hidden !important;
+}
+
+.row {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.master-slider, #masterslider {
+    max-width: 100% !important;
+    overflow: hidden !important;
+}
+
+.page-content {
+    overflow-x: hidden !important;
 }
 </style>
 
