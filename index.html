@@ -564,25 +564,23 @@ document.addEventListener('click', function(e) {
             
             <!-- Card 1 - EST. 2025 -->
             <div class="col-md-4 col-sm-4">
-                <div class="service-feature-box" style="background: #D4B895; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); transition: transform 0.3s ease, box-shadow 0.3s ease; height: 100%;">
-                    <div class="service-media" style="overflow: hidden; border-radius: 12px 12px 0 0;">
-                        <img src="img/pics/img01-360x216.jpg" alt="Trucking" style="width: 100%; transition: transform 0.5s ease;">
-                        <div style="position: relative; margin-top: -40px; text-align: center;">
-                        </div>
-                    </div><!-- .service-media end -->
-                    <div class="service-body" style="padding: 25px;">
-                        <div class="custom-heading">
-                            <h4 style="font-size: 24px; font-weight: 700; margin-bottom: 15px; color: #1a1a1a;">Established 2025</h4>
-                        </div>
-                        <p style="color: #666; line-height: 1.6; margin-bottom: 20px;">
-                        Founded in 2025, TCI Trucking brings real-world driving experience and a commitment to doing things differently. We put drivers first because that's how we started. Our team is dedicated to excellence in every mile.
-                        </p>
-                        <a href="simple-page-title.html" style="color: #D4B895; text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 8px;">
-                            Read more <i class="fa fa-chevron-right" style="font-size: 12px;"></i>
-                        </a>
-                    </div><!-- .service-body end -->
-                </div><!-- .service-feature-box-end -->
-            </div><!-- .col-md-4 end -->
+    <div class="service-feature-box">
+        <div class="service-media">
+            <img src="img/pics/img01-360x216.jpg" alt="Trucking">
+        </div>
+        <div class="service-body">
+            <div class="custom-heading">
+                <h4>Established 2025</h4>
+            </div>
+            <p>
+                Founded in 2025, TCI Trucking brings real-world driving experience and a commitment to doing things differently. We put drivers first because that's how we started. Our team is dedicated to excellence in every mile.
+            </p>
+            <a href="simple-page-title.html" class="read-more-link">
+                Read more <i class="fa fa-chevron-right"></i>
+            </a>
+        </div>
+    </div>
+</div>
             
             <!-- Card 2 - Precision in Every Pallet -->
             <div class="col-md-4 col-sm-4">
@@ -1242,45 +1240,71 @@ jQuery(document).ready(function($) {
 <style>
 /* Make all service boxes equal height */
 .service-feature-box {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-}
-
-.service-body {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-}
-
-.service-body p {
-    flex: 1;
-}
-
-/* OR use JavaScript/jQuery to match heights */
-</style>
-
-<style>
-/* Make all service boxes equal height */
-.service-feature-box {
+    min-height: 520px !important;
     height: 100% !important;
     display: flex !important;
     flex-direction: column !important;
+    background: #ffffff !important;
+    border-radius: 12px !important;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08) !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease !important;
 }
 
 .service-body {
     flex: 1 !important;
     display: flex !important;
     flex-direction: column !important;
+    padding: 25px !important;
 }
 
 .service-body p {
     flex: 1 !important;
+    margin-bottom: 20px !important;
+    color: #666 !important;
+    line-height: 1.6 !important;
+}
+
+.service-body h4 {
+    font-size: 24px !important;
+    font-weight: 700 !important;
+    margin-bottom: 15px !important;
+    color: #1a1a1a !important;
 }
 
 /* Make all columns the same height */
 .col-md-4, .col-sm-4 {
     display: flex !important;
+}
+
+/* Hover effect */
+.service-feature-box:hover {
+    transform: translateY(-8px) !important;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.12) !important;
+}
+
+.service-feature-box:hover img {
+    transform: scale(1.05) !important;
+}
+
+.service-feature-box img {
+    transition: transform 0.5s ease !important;
+    width: 100% !important;
+}
+.read-more-link {
+    color: #D4B895 !important;
+    text-decoration: none !important;
+    font-weight: 600 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+}
+
+.read-more-link:hover {
+    color: #c0a07a !important;
+}
+.service-media {
+    overflow: hidden !important;
+    border-radius: 12px 12px 0 0 !important;
 }
 </style>
 
