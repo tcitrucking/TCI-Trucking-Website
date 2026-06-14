@@ -491,40 +491,19 @@ document.addEventListener('click', function(e) {
             
             <!-- slide 02 start -->
     <div class="ms-slide">
-        <!-- slide background -->
-        <img src="img/slider/slide02.png" data-src="img/slider/slide02.png" alt="Worldwide freight services"/> 
-        <!-- First line - NOW HIRING -->
-        <h2 class="ms-layer pi-caption01" 
-            style="left: 500px; top: 340px;" 
-            data-type="text" 
-            data-effect="bottom(40)" 
-            data-duration="1900" 
-            data-hide-effect="fade" 
-            data-delay="300" 
-        >
-            NOW HIRING
-        </h2>
-        <!-- Second line - OWNER-OPERATORS -->
-        <h2 class="ms-layer pi-caption01" 
-            style="left: 300px; top: 400px;" 
-            data-type="text" 
-            data-effect="bottom(40)" 
-            data-duration="1900" 
-            data-hide-effect="fade" 
-            data-delay="800" 
-        >
-            OWNER-OPERATORS
-        </h2>
-        <!-- APPLY NOW Button -->
-        <a href="driver-application.html" class="ms-layer" 
-           style="left: 600px; top: 480px; background: #e74c3c; color: white; padding: 12px 30px; border-radius: 5px; font-weight: bold; font-size: 18px; letter-spacing: 1px; text-decoration: none; display: inline-block; text-transform: uppercase; box-shadow: 0 4px 8px rgba(0,0,0,0.2);"
-           data-type="text" 
-           data-effect="top(short)" 
-           data-duration="300"
-           data-hide-effect="fade" 
-           data-delay="1000">
-            APPLY NOW
-        </a>
+       <!-- slide background -->
+<img src="img/slider/slide02.png" data-src="img/slider/slide02.png" alt="Worldwide freight services"/> 
+
+<!-- NOW HIRING Button -->
+<a href="driver-application.html" class="ms-layer tci-hiring-btn"
+   style="left: 600px; top: 480px;"
+   data-type="text" 
+   data-effect="top(short)" 
+   data-duration="500"
+   data-hide-effect="fade" 
+   data-delay="1000">
+    NOW HIRING <span>APPLY TODAY →</span>
+</a>
         <!-- line image -->
         <img class="ms-layer" src="masterslider/blank.gif" data-src="img/slider/slider-line.jpg" 
              style="left: 650px; top: 455px;"
@@ -1329,6 +1308,39 @@ body, html {
     margin-bottom: -10px !important;
 }
 
+<style>
+.tci-hiring-btn {
+    background: linear-gradient(135deg, #ffcc33 0%, #f39c12 45%, #e74c3c 100%);
+    color: #111 !important;
+    padding: 15px 34px;
+    border-radius: 50px;
+    font-weight: 900;
+    font-size: 18px;
+    letter-spacing: 1.3px;
+    text-decoration: none !important;
+    display: inline-flex !important;
+    align-items: center;
+    gap: 12px;
+    text-transform: uppercase;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+    border: 2px solid rgba(255,255,255,0.65);
+    transition: all 0.25s ease;
+}
+
+.tci-hiring-btn span {
+    background: #111;
+    color: #fff;
+    padding: 6px 13px;
+    border-radius: 30px;
+    font-size: 12px;
+    letter-spacing: 0.8px;
+}
+
+.tci-hiring-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 32px rgba(0,0,0,0.45);
+    color: #111 !important;
+}
 </style>
 </body>
 </html>
