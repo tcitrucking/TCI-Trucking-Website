@@ -1389,21 +1389,33 @@ body, html {
         display: inline-flex !important;
         align-items: center !important;
         flex-direction: row !important;
-        gap: 8px !important;
+        gap: 7px !important;
 
-        background: transparent !important;
-        border: none !important;
-        box-shadow: none !important;
-        border-radius: 0 !important;
+        padding: 7px 14px !important;
+        border-radius: 999px !important;
 
-        padding: 4px 8px !important;
+        background: linear-gradient(135deg, #111111 0%, #2b2b2b 55%, #000000 100%) !important;
+        border: 1.5px solid #d4af37 !important;
+
+        box-shadow:
+            0 0 14px rgba(212, 175, 55, 0.55),
+            0 6px 14px rgba(0, 0, 0, 0.45),
+            inset 0 1px 0 rgba(255,255,255,0.25) !important;
+
         overflow: hidden !important;
         white-space: nowrap !important;
         z-index: 99999 !important;
     }
 
     .tci-hiring-window-btn::before {
-        display: none !important;
+        content: "" !important;
+        display: block !important;
+        width: 7px !important;
+        height: 7px !important;
+        background: #7a0000 !important;
+        border-radius: 50% !important;
+        box-shadow: 0 0 7px rgba(122, 0, 0, 0.9) !important;
+        flex-shrink: 0 !important;
     }
 
     .tci-hiring-window-btn::after {
@@ -1411,29 +1423,36 @@ body, html {
         display: block !important;
         position: absolute !important;
         top: 0 !important;
-        left: -60px !important;
-        width: 45px !important;
+        left: -45px !important;
+        width: 35px !important;
         height: 100% !important;
-        background: rgba(255,255,255,0.55) !important;
+        background: rgba(255,255,255,0.45) !important;
         transform: skewX(-25deg) !important;
-        animation: tciButtonShineMobile 3s infinite !important;
+        animation: tciButtonShineMobile 2.8s infinite !important;
         pointer-events: none !important;
+        z-index: 1 !important;
+    }
+
+    .tci-hiring-red,
+    .tci-hiring-black {
+        position: relative !important;
+        z-index: 2 !important;
     }
 
     .tci-hiring-red {
         color: #8b0000 !important;
-        font-size: 13px !important;
+        font-size: 10px !important;
         font-weight: 900 !important;
-        letter-spacing: 4px !important;
+        letter-spacing: 2.2px !important;
         text-transform: uppercase !important;
         line-height: 1 !important;
     }
 
     .tci-hiring-black {
-        color: #111111 !important;
-        font-size: 12px !important;
-        font-weight: 900 !important;
-        letter-spacing: 1px !important;
+        color: #ffffff !important;
+        font-size: 9px !important;
+        font-weight: 800 !important;
+        letter-spacing: 0.7px !important;
         background: transparent !important;
         padding: 0 !important;
         border-radius: 0 !important;
@@ -1442,7 +1461,7 @@ body, html {
 
     @keyframes tciButtonShineMobile {
         0% {
-            left: -60px;
+            left: -45px;
         }
         45% {
             left: 120%;
