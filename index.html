@@ -1383,31 +1383,39 @@ body, html {
 <style>
 @media only screen and (max-width: 767px) {
 
-    .tci-hiring-window-btn {
-        visibility: visible !important;
-        opacity: 1 !important;
+    .ms-layer.tci-hiring-window-btn {
+        left: 680px !important;
+        top: 250px !important;
+
+        width: auto !important;
+        height: auto !important;
+        min-width: 0 !important;
+        max-width: none !important;
+
         display: inline-flex !important;
         align-items: center !important;
         flex-direction: row !important;
-        gap: 7px !important;
+        gap: 8px !important;
 
-        padding: 7px 14px !important;
-        border-radius: 999px !important;
+        padding: 8px 16px !important;
+        border-radius: 28px !important;
 
         background: linear-gradient(135deg, #111111 0%, #2b2b2b 55%, #000000 100%) !important;
         border: 1.5px solid #d4af37 !important;
 
         box-shadow:
-            0 0 14px rgba(212, 175, 55, 0.55),
-            0 6px 14px rgba(0, 0, 0, 0.45),
+            0 0 13px rgba(212, 175, 55, 0.55),
+            0 5px 12px rgba(0, 0, 0, 0.45),
             inset 0 1px 0 rgba(255,255,255,0.25) !important;
 
         overflow: hidden !important;
         white-space: nowrap !important;
+        line-height: 1 !important;
+        box-sizing: border-box !important;
         z-index: 99999 !important;
     }
 
-    .tci-hiring-window-btn::before {
+    .ms-layer.tci-hiring-window-btn::before {
         content: "" !important;
         display: block !important;
         width: 7px !important;
@@ -1418,7 +1426,7 @@ body, html {
         flex-shrink: 0 !important;
     }
 
-    .tci-hiring-window-btn::after {
+    .ms-layer.tci-hiring-window-btn::after {
         content: "" !important;
         display: block !important;
         position: absolute !important;
@@ -1437,15 +1445,15 @@ body, html {
     .tci-hiring-black {
         position: relative !important;
         z-index: 2 !important;
+        line-height: 1 !important;
     }
 
     .tci-hiring-red {
-        color: #8b0000 !important;
+        color: #7a0000 !important;
         font-size: 10px !important;
         font-weight: 900 !important;
         letter-spacing: 2.2px !important;
         text-transform: uppercase !important;
-        line-height: 1 !important;
     }
 
     .tci-hiring-black {
@@ -1456,7 +1464,6 @@ body, html {
         background: transparent !important;
         padding: 0 !important;
         border-radius: 0 !important;
-        line-height: 1 !important;
     }
 
     @keyframes tciButtonShineMobile {
