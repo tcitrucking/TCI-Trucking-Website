@@ -1379,5 +1379,60 @@ body, html {
     }
 }
 </style>
+<style>
+@media only screen and (max-width: 767px) {
+
+    .tci-hiring-window-btn {
+        left: 520px !important;
+        top: 145px !important;
+
+        padding: 8px 14px !important;
+        gap: 7px !important;
+
+        background: rgba(255, 255, 255, 0.72) !important;
+        border: 1px solid rgba(212, 175, 55, 0.75) !important;
+        border-radius: 999px !important;
+
+        box-shadow:
+            0 0 14px rgba(0, 0, 0, 0.22),
+            inset 0 1px 0 rgba(255,255,255,0.45) !important;
+
+        backdrop-filter: blur(3px);
+        -webkit-backdrop-filter: blur(3px);
+
+        transform: scale(0.82) !important;
+        transform-origin: center center !important;
+    }
+
+    .tci-hiring-window-btn::before {
+        width: 8px !important;
+        height: 8px !important;
+        background: #7a0000 !important;
+        box-shadow: 0 0 8px rgba(122, 0, 0, 0.8) !important;
+    }
+
+    .tci-hiring-red {
+        color: #7a0000 !important;
+        font-size: 13px !important;
+        letter-spacing: 2px !important;
+        font-weight: 900 !important;
+    }
+
+    .tci-hiring-black {
+        color: #111111 !important;
+        font-size: 12px !important;
+        font-weight: 800 !important;
+        letter-spacing: 0.8px !important;
+        background: none !important;
+        padding: 0 !important;
+        border-radius: 0 !important;
+    }
+
+    .tci-hiring-window-btn::after {
+        width: 38px !important;
+        background: rgba(255,255,255,0.55) !important;
+    }
+}
+</style>                                        
 </body>
 </html>
