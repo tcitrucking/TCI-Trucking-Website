@@ -495,15 +495,11 @@ document.addEventListener('click', function(e) {
 <img src="img/slider/slide02.png" data-src="img/slider/slide02.png" alt="Worldwide freight services"/> 
 
 <!-- NOW HIRING Button -->
-<a href="driver-application.html" class="ms-layer tci-now-hiring-btn"
-   style="left: 600px; top: 480px;"
-   data-type="text" 
-   data-effect="top(short)" 
-   data-duration="500"
-   data-hide-effect="fade" 
-   data-delay="1000">
+<a href="driver-application.html" class="ms-layer tci-hiring-window-btn"
+   style="left: 930px; top: 410px;"
+   data-type="text">
     <strong>NOW HIRING!</strong>
-    <span>Owner Operators</span>
+    <span>Apply Today →</span>
 </a>
         <!-- line image -->
         <img class="ms-layer" src="masterslider/blank.gif" data-src="img/slider/slider-line.jpg" 
@@ -1310,72 +1306,77 @@ body, html {
 }
 
 <style>
-.tci-now-hiring-btn {
+.tci-hiring-window-btn {
     position: relative;
     display: inline-flex !important;
     align-items: center;
-    gap: 14px;
+    gap: 12px;
     padding: 14px 34px;
     border-radius: 999px;
-    background: linear-gradient(135deg, #ffd400 0%, #ffbf00 45%, #f7a600 100%);
-    color: #111 !important;
-    text-decoration: none !important;
-    text-transform: uppercase;
+
+    background: linear-gradient(135deg, #111111 0%, #2b2b2b 55%, #000000 100%);
+    color: #ffffff !important;
+
     font-family: Arial, sans-serif;
-    font-size: 17px;
+    font-size: 16px;
     font-weight: 900;
-    letter-spacing: 2px;
-    box-shadow: 
-        0 0 18px rgba(255, 212, 0, 0.45),
-        0 8px 22px rgba(0, 0, 0, 0.45),
-        inset 0 2px 0 rgba(255, 255, 255, 0.45);
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+    text-decoration: none !important;
+
+    border: 2px solid #d4af37;
+    box-shadow:
+        0 0 18px rgba(212, 175, 55, 0.55),
+        0 10px 25px rgba(0, 0, 0, 0.45),
+        inset 0 1px 0 rgba(255,255,255,0.25);
+
+    z-index: 9999 !important;
     overflow: hidden;
-    border: 2px solid rgba(255, 255, 255, 0.25);
-    transition: all 0.3s ease;
 }
 
-.tci-now-hiring-btn::before {
+.tci-hiring-window-btn::before {
     content: "";
-    width: 13px;
-    height: 13px;
-    background: #d62828;
+    width: 12px;
+    height: 12px;
+    background: #d4af37;
     border-radius: 50%;
-    box-shadow: 0 0 10px rgba(214, 40, 40, 0.7);
+    box-shadow: 0 0 10px rgba(212, 175, 55, 0.9);
     flex-shrink: 0;
 }
 
-.tci-now-hiring-btn::after {
+.tci-hiring-window-btn::after {
     content: "";
     position: absolute;
     top: 0;
-    left: -80px;
+    left: -90px;
     width: 55px;
     height: 100%;
-    background: rgba(255, 255, 255, 0.45);
+    background: rgba(255,255,255,0.45);
     transform: skewX(-25deg);
-    animation: tciShine 3s infinite;
+    animation: tciButtonShine 3s infinite;
 }
 
-.tci-now-hiring-btn strong {
+.tci-hiring-window-btn strong {
+    color: #ffffff;
     font-weight: 900;
 }
 
-.tci-now-hiring-btn span {
+.tci-hiring-window-btn span {
+    color: #d4af37;
     font-size: 15px;
-    font-weight: 500;
+    font-weight: 700;
     letter-spacing: 1px;
     text-transform: none;
-    color: #222;
 }
 
-.tci-now-hiring-btn:hover {
-    transform: translateY(-3px) scale(1.03);
-    box-shadow: 
-        0 0 28px rgba(255, 212, 0, 0.7),
+.tci-hiring-window-btn:hover {
+    transform: translateY(-2px) scale(1.03);
+    box-shadow:
+        0 0 28px rgba(212, 175, 55, 0.8),
         0 12px 30px rgba(0, 0, 0, 0.55);
 }
 
-@keyframes tciShine {
+@keyframes tciButtonShine {
     0% {
         left: -90px;
     }
