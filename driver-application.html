@@ -63,14 +63,9 @@
                 .footer-widget-container .icon-container img { max-width: 200px !important; }
             }
 
-            /* --- NEW ELEGANT BRIGHT FORM STYLES --- */
-            body { 
-                background-color: #f7f7f7 !important; /* Soft grey background to make the white card pop */
-            }
-            
-            .page-content {
-                background-color: #f7f7f7;
-            }
+            /* --- ELEGANT BRIGHT FORM STYLES --- */
+            body { background-color: #f7f7f7 !important; }
+            .page-content { background-color: #f7f7f7; }
 
             .elegant-form-wrapper {
                 background: #ffffff;
@@ -78,47 +73,37 @@
                 box-shadow: 0 20px 50px rgba(0,0,0,0.08), 0 0 0 1px rgba(0,0,0,0.03);
                 padding: 60px;
                 margin-bottom: 60px;
-                max-width: 1100px;
+                max-width: 1200px;
                 margin-left: auto;
                 margin-right: auto;
                 position: relative;
                 overflow: hidden;
             }
 
-            /* Gold accent bar at the top of the card */
             .elegant-form-wrapper::before {
                 content: '';
                 position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 8px;
+                top: 0; left: 0; width: 100%; height: 8px;
                 background: linear-gradient(90deg, #D4B895, #e8d5bd, #D4B895);
             }
 
             .elegant-form-wrapper h2 {
-                color: #000000;
-                font-weight: 800;
-                font-size: 34px;
-                text-transform: uppercase;
-                letter-spacing: 2px;
-                margin-bottom: 15px;
-                font-family: 'Raleway', sans-serif;
+                color: #000000; font-weight: 800; font-size: 34px;
+                text-transform: uppercase; letter-spacing: 2px;
+                margin-bottom: 15px; font-family: 'Raleway', sans-serif;
             }
 
             .elegant-form-wrapper p.intro-text {
-                color: #555;
-                font-size: 16px;
-                line-height: 1.7;
-                margin-bottom: 45px;
-                font-family: 'Open Sans', sans-serif;
+                color: #555; font-size: 16px; line-height: 1.7;
+                margin-bottom: 45px; font-family: 'Open Sans', sans-serif;
             }
 
-            /* The Grid System for the form */
-            .elegant-form-grid {
+            /* --- THE 3-COLUMN GRID SYSTEM --- */
+            .elegant-row {
                 display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-                gap: 30px;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 25px;
+                margin-bottom: 25px;
             }
 
             /* Individual Field Groups */
@@ -129,19 +114,13 @@
             }
 
             .elegant-group label {
-                font-weight: 700;
-                color: #000;
-                font-size: 13px;
-                margin-bottom: 10px;
-                text-transform: uppercase;
-                letter-spacing: 1px;
-                font-family: 'Raleway', sans-serif;
+                font-weight: 700; color: #000; font-size: 13px;
+                margin-bottom: 10px; text-transform: uppercase;
+                letter-spacing: 1px; font-family: 'Raleway', sans-serif;
             }
 
             .elegant-group label .required {
-                color: #D4B895;
-                margin-left: 3px;
-                font-size: 16px;
+                color: #D4B895; margin-left: 3px; font-size: 16px;
             }
 
             /* Fancy Inputs & Selects */
@@ -156,7 +135,7 @@
                 font-size: 15px;
                 color: #000;
                 background-color: #fcfcfc;
-                transition: all 0.3s ease;
+                transition: border-color 0.3s ease, box-shadow 0.3s ease; 
                 font-family: 'Open Sans', sans-serif;
                 box-sizing: border-box;
                 -webkit-appearance: none;
@@ -174,20 +153,16 @@
                 cursor: pointer;
             }
 
-            /* Input Focus States */
+            /* Input Focus States - No moving/glitching */
             .elegant-group input:focus,
             .elegant-group select:focus {
                 border-color: #D4B895;
                 background-color: #ffffff;
                 outline: none;
-                box-shadow: 0 5px 20px rgba(212, 184, 149, 0.15);
-                transform: translateY(-2px);
+                box-shadow: 0 0 0 4px rgba(212, 184, 149, 0.15);
             }
 
-            .elegant-group input::placeholder {
-                color: #bbb;
-                font-style: italic;
-            }
+            .elegant-group input::placeholder { color: #bbb; font-style: italic; }
 
             /* Remove number input arrows */
             input[type="number"]::-webkit-inner-spin-button,
@@ -196,7 +171,7 @@
 
             /* The Submit Button */
             .elegant-submit-btn {
-                grid-column: 1 / -1; /* Spans full width of grid */
+                width: 100%;
                 background-color: #D4B895;
                 color: #000000;
                 border: none;
@@ -208,7 +183,7 @@
                 border-radius: 8px;
                 cursor: pointer;
                 transition: all 0.3s ease;
-                margin-top: 30px;
+                margin-top: 20px;
                 box-shadow: 0 10px 30px rgba(212, 184, 149, 0.4);
                 font-family: 'Raleway', sans-serif;
             }
@@ -221,46 +196,60 @@
 
             /* Status Message Styling */
             #form-status {
-                grid-column: 1 / -1;
                 text-align: center;
-                margin: 10px 0;
+                margin: 20px 0;
                 padding: 20px;
                 border-radius: 8px;
                 font-weight: bold;
                 font-size: 16px;
-                display: none; /* Hidden by default */
+                display: none;
                 font-family: 'Open Sans', sans-serif;
             }
             #form-status.success { display: block; background-color: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
             #form-status.error { display: block; background-color: #f8d7da; color: #721c24; border: 1px solid #f5c6cb; }
             #form-status.loading { display: block; background-color: #fff3cd; color: #856404; border: 1px solid #ffeeba; }
 
-            /* Responsive tweaks */
+            /* Responsive tweaks - Stack columns on smaller screens */
+            @media (max-width: 992px) {
+                .elegant-row { grid-template-columns: repeat(2, 1fr); }
+            }
             @media (max-width: 768px) {
                 .elegant-form-wrapper { padding: 40px 25px; margin: 20px; }
                 .elegant-form-wrapper h2 { font-size: 26px; }
+                .elegant-row { grid-template-columns: 1fr; gap: 15px; }
                 .elegant-submit-btn { font-size: 18px; padding: 18px 30px; letter-spacing: 2px; }
-                .elegant-form-grid { grid-template-columns: 1fr; gap: 20px; }
             }
         </style>
     </head>
     <body>
         <div class="header-wrapper">
-            <!-- Header code remains exactly the same -->
-            <header id="header" class="header-style02">
+            <!-- .header.header-style01 start -->
+            <header id="header"  class="header-style02">
                 <div id="top-bar-wrapper" class="clearfix">
                     <div class="container">
                         <div class="row">
                             <div class="col-md-6">
                                 <ul id="quick-links">
-                                    <li><i class="fa fa-phone"></i><span>(208) 651-9597</span></li>
-                                    <li><i class="fa fa-envelope"></i><a href="contact-simple.html">Contact us today</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </header>
+                                    <li>
+                                        <i class="fa fa-phone"></i>
+                                        <span>(208) 651-9597</span>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-envelope"></i>
+                                        <a href="contact-simple.html">Contact us today</a>
+                                    </li>
+                                </ul><!-- .quick links end -->
+                            </div><!-- .col-md-6 end -->
+                             </li>
+                                    </ul><!-- .wpml-lang-dropdown end -->
+                                </div><!-- .wpml-languages.enabled end -->
+                            </div><!-- .col-md-6 end -->
+                        </div><!-- .row end -->
+                    </div><!-- .container end -->
+                </div><!-- .top-bar-wrapper end -->
+        <div class="header-wrapper header-transparent">
+            <!-- .header.header-style01 start -->
+            <header id="header"  class="header-style01">
         </div>
 
         <div class="header-wrapper header-transparent">
@@ -345,9 +334,8 @@
                                 
                                 <input type="hidden" name="_subject" value="New Driver Application - TCI Trucking">
                                 
-                                <div class="elegant-form-grid">
-                                    
-                                    <!-- Row 1 -->
+                                <!-- ROW 1: Name | Last Name | DOB -->
+                                <div class="elegant-row">
                                     <div class="elegant-group">
                                         <label>Driver First Name <span class="required">*</span></label>
                                         <input type="text" name="first_name" id="driver-name" required placeholder="John">
@@ -360,8 +348,10 @@
                                         <label>Date of Birth <span class="required">*</span></label>
                                         <input type="text" name="dob" id="dob" placeholder="MM/DD/YYYY" maxlength="10" required>
                                     </div>
+                                </div>
 
-                                    <!-- Row 2 -->
+                                <!-- ROW 2: You Are | Driver License Date | Type of Driver License -->
+                                <div class="elegant-row">
                                     <div class="elegant-group">
                                         <label>You Are <span class="required">*</span></label>
                                         <select name="driver_type" id="driver-type" required>
@@ -369,6 +359,22 @@
                                             <option value="Owner Operator">Owner Operator</option>
                                             <option value="Company Driver">Company Driver</option>
                                         </select>
+                                    </div>
+                                    <div class="elegant-group">
+                                        <label>Driver's License Date Issued <span class="required">*</span></label>
+                                        <input type="text" name="license_date" id="driver-license-date" placeholder="MM/DD/YYYY" maxlength="10" required>
+                                    </div>
+                                    <div class="elegant-group">
+                                        <label>Type of Driver's License <span class="required">*</span></label>
+                                        <input type="text" name="license_type" id="driver-licence-type" placeholder="e.g. Class A CDL" required>
+                                    </div>
+                                </div>
+
+                                <!-- ROW 3: Years of Experience | Equipment Type | Trailer Type -->
+                                <div class="elegant-row">
+                                    <div class="elegant-group">
+                                        <label>Years of Experience <span class="required">*</span></label>
+                                        <input type="text" name="experience" id="driver-experience" placeholder="0" required>
                                     </div>
                                     <div class="elegant-group">
                                         <label>Equipment Type <span class="required">*</span></label>
@@ -379,30 +385,18 @@
                                         </select>
                                     </div>
                                     <div class="elegant-group">
-                                        <label>Best Way to Contact <span class="required">*</span></label>
-                                        <select name="contact_method" id="contact-method" required>
+                                        <label>Trailer Type <span class="required">*</span></label>
+                                        <select name="trailer_type" id="trailer-type" required>
                                             <option value="" disabled selected>- Select -</option>
-                                            <option value="Call">Call</option>
-                                            <option value="Text">Text</option>
-                                            <option value="Email">Email</option>
+                                            <option value="No Trailer - Power Only">No Trailer - Power Only</option>
+                                            <option value="Reefer">Reefer</option>
+                                            <option value="Dry Van">Dry Van</option>
                                         </select>
                                     </div>
+                                </div>
 
-                                    <!-- Row 3 -->
-                                    <div class="elegant-group">
-                                        <label>Driver's License Date Issued <span class="required">*</span></label>
-                                        <input type="text" name="license_date" id="driver-license-date" placeholder="MM/DD/YYYY" maxlength="10" required>
-                                    </div>
-                                    <div class="elegant-group">
-                                        <label>Type of Driver's License <span class="required">*</span></label>
-                                        <input type="text" name="license_type" id="driver-licence-type" placeholder="e.g. Class A CDL" required>
-                                    </div>
-                                    <div class="elegant-group">
-                                        <label>Years of Experience <span class="required">*</span></label>
-                                        <input type="text" name="experience" id="driver-experience" placeholder="0" required>
-                                    </div>
-
-                                    <!-- Row 4 -->
+                                <!-- ROW 4: Phone | Email | Best Way to Contact -->
+                                <div class="elegant-row">
                                     <div class="elegant-group">
                                         <label>Phone Number <span class="required">*</span></label>
                                         <input type="tel" name="phone" id="driver-phone" inputmode="numeric" placeholder="(000) 000-0000" maxlength="14" required>
@@ -411,14 +405,23 @@
                                         <label>Email Address <span class="required">*</span></label>
                                         <input type="email" name="_replyto" id="driver-email" placeholder="you@example.com" required>
                                     </div>
-                                    
-                                    <!-- Status Message -->
-                                    <div id="form-status"></div>
-                                    
-                                    <!-- Submit Button -->
-                                    <button type="submit" class="elegant-submit-btn">Apply Now</button>
-
+                                    <div class="elegant-group">
+                                        <label>Best Way to Contact <span class="required">*</span></label>
+                                        <select name="contact_method" id="contact-method" required>
+                                            <option value="" disabled selected>- Select -</option>
+                                            <option value="Call">Call</option>
+                                            <option value="Text">Text</option>
+                                            <option value="Email">Email</option>
+                                        </select>
+                                    </div>
                                 </div>
+                                
+                                <!-- Status Message -->
+                                <div id="form-status"></div>
+                                
+                                <!-- Submit Button -->
+                                <button type="submit" class="elegant-submit-btn">Apply Now</button>
+
                             </form>
                         </div>
 
