@@ -1,1186 +1,565 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Trucking - Transportation and Logistics Driver Application</title>
-        <meta name="description" content="TCI Trucking LLC - Professional Trucking and Transport Services">
+        <title>Driver Application | TCI Trucking LLC</title>
+        <meta name="description" content="Apply to drive for TCI Trucking LLC. We offer 90% revenue, choose your loads, and 3-day payments.">
         <meta name="author" content="pixel-industry">
-        <meta name="keywords" content="transportation, logistics, transportation template, logistics template, cargo, business">
+        <meta name="keywords" content="trucking jobs, driver application, CDL jobs, TCI Trucking">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
         <!-- Stylesheets -->
-        <link rel="stylesheet" href="css/bootstrap.css"/><!-- bootstrap grid -->
-        <link rel="stylesheet" href="css/style.css"/><!-- template styles -->
-        <link rel="stylesheet" href="css/color-default.css"/><!-- template main color -->
-        <link rel="stylesheet" href="css/retina.css"/><!-- retina ready styles -->
-        <link rel="stylesheet" href="css/responsive.css"/><!-- responsive styles -->
-        <!-- Google Web fonts -->
+        <link rel="stylesheet" href="css/bootstrap.css"/>
+        <link rel="stylesheet" href="css/style.css"/>
+        <link rel="stylesheet" href="css/color-default.css"/>
+        <link rel="stylesheet" href="css/retina.css"/>
+        <link rel="stylesheet" href="css/responsive.css"/>
         <link href='http://fonts.googleapis.com/css?family=Raleway:400,500,600,700,800' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,400,800,700,600' rel='stylesheet' type='text/css'>
-        <!-- Font icons -->
-        <link rel="stylesheet" href="icon-fonts/font-awesome-4.3.0/css/font-awesome.min.css"/><!-- Fontawesome icons css --> 
+        <link rel="stylesheet" href="icon-fonts/font-awesome-4.3.0/css/font-awesome.min.css"/>
+
         <style>
-    /* Mobile Menu Overlay Styles */
-.mobile-menu {
-    position: fixed;
-    top: 0;
-    left: -100%;
-    width: 80%;
-    max-width: 400px;
-    height: 100%;
-    background: #1a1a1a;
-    z-index: 10001;
-    transition: left 0.3s ease;
-    overflow-y: auto;
-    padding: 60px 20px 30px;
-    box-shadow: 2px 0 10px rgba(0,0,0,0.3);
-}
-
-.mobile-menu.show {
-    left: 0;
-}
-
-.mobile-menu ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.mobile-menu > ul > li {
-    margin-bottom: 5px;
-    border-bottom: 1px solid rgba(255,255,255,0.1);
-}
-
-.mobile-menu > ul > li > a {
-    display: block;
-    padding: 15px 10px;
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: bold;
-    letter-spacing: 1px;
-}
-
-.mobile-menu > ul > li > a:hover {
-    background: #D4B895;
-    color: black;
-}
-
-/* Submenu styles */
-.mobile-submenu {
-    display: none;
-    list-style: none;
-    padding: 0;
-    margin: 0 0 10px 0;
-    background: rgba(255,255,255,0.05);
-    border-radius: 5px;
-}
-
-.mobile-submenu li {
-    border-bottom: 1px solid rgba(255,255,255,0.05);
-}
-
-.mobile-submenu li:last-child {
-    border-bottom: none;
-}
-
-.mobile-submenu li a {
-    display: block;
-    padding: 12px 20px 12px 30px;
-    color: #ddd;
-    text-decoration: none;
-    font-size: 16px;
-}
-
-.mobile-submenu li a:hover {
-    background: #D4B895;
-    color: black;
-}
-
-.mobile-menu-close {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    color: white;
-    font-size: 30px;
-    cursor: pointer;
-    z-index: 10002;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.mobile-menu-close:hover {
-    color: #D4B895;
-}
-
-.mobile-menu-button {
-    position: relative;
-    margin: 10px auto;
-    text-align: center;
-    width: 100%;
-}
-
-.mobile-menu-button button {
-    background: #D4B895;
-    color: black;
-    border: none;
-    padding: 12px 40px;
-    font-size: 18px;
-    font-weight: bold;
-    border-radius: 5px;
-    cursor: pointer;
-    display: inline-block;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-/* Hide desktop menu on mobile */
-@media (max-width: 991px) {
-    .navbar-collapse, #dl-menu, .dl-menuwrapper, .dl-trigger {
-        display: none !important;
-    }
-}
-
-/* Hide mobile menu on desktop */
-@media (min-width: 992px) {
-    .mobile-menu-button, .mobile-menu {
-        display: none !important;
-    }
-}
-/* Footer mobile optimizations */
-@media (max-width: 767px) {
-    .footer-widget-container {
-        margin-bottom: 30px;
-        text-align: center !important;  /* Center all footer content */
-    }
-    
-    /* Make the "WHY DRIVERS CHOOSE TCI" section centered */
-    .footer-widget-container:first-child {
-        text-align: center !important;
-    }
-    
-    .footer-widget-container:first-child p {
-        font-size: 14px;
-        margin-bottom: 8px;
-        line-height: 1.4;
-        text-align: center !important;
-    }
-    
-    /* Style for "Email Us to learn more!" */
-    .footer-widget-container:first-child p:first-of-type {
-        color: #bcc0c4 !important;
-        font-size: 16px;
-        margin: 15px 0 5px 0;
-        text-align: center !important;
-    }
-    
-    /* Center the form */
-    .footer-widget-container:first-child form {
-        max-width: 220px;
-        margin: 5px auto !important;  /* Changed from '5px 0' to '5px auto' to center */
-    }
-    
-    /* Make the input field smaller */
-    .footer-widget-container:first-child input#newsletterEmail {
-        height: 36px !important;
-        padding: 8px 40px 8px 10px !important;
-        font-size: 12px !important;
-    }
-    
-    /* Make the envelope button smaller */
-    .footer-widget-container:first-child button#newsletterSubmitBtn {
-        width: 36px !important;
-        height: 36px !important;
-    }
-    
-    /* Make the envelope icon smaller */
-    .footer-widget-container:first-child button#newsletterSubmitBtn i {
-        font-size: 14px !important;
-    }
-    
-    /* Center the logo */
-    .footer-widget-container .icon-container img {
-        max-width: 280px !important;
-        margin: 0 auto !important;
-        display: block;
-    }
-    
-    /* Contact section centered */
-    .footer-widget-container:last-child {
-        text-align: center !important;
-    }
-    
-    .footer-widget-container:last-child address,
-    .footer-widget-container:last-child .text-big,
-    .footer-widget-container:last-child p {
-        margin-bottom: 5px;
-        text-align: center !important;
-    }
-    
-    /* Center the title */
-    .footer-widget-container .title h3 {
-        text-align: center !important;
-    }
-    
-    /* Copyright text */
-    .copyright-container p {
-        font-size: 11px;
-        line-height: 1.5;
-        padding: 0 10px;
-        text-align: center;
-    }
-}
-
-/* For very small phones */
-@media (max-width: 480px) {
-    .footer-widget-container:first-child p {
-        font-size: 13px;
-    }
-    
-    .footer-widget-container:first-child form {
-        max-width: 180px;
-        margin: 5px auto !important;
-    }
-    
-    .footer-widget-container:first-child input#newsletterEmail {
-        height: 32px !important;
-        padding: 6px 35px 6px 8px !important;
-        font-size: 11px !important;
-    }
-    
-    .footer-widget-container:first-child button#newsletterSubmitBtn {
-        width: 32px !important;
-        height: 32px !important;
-    }
-    
-    .footer-widget-container .icon-container img {
-        max-width: 200px !important;
-    }
-}
-</style>
-<script>
-function toggleMobileMenu() {
-    const menu = document.getElementById('mobileMenu');
-    menu.classList.toggle('show');
-}
-
-function closeMobileMenu() {
-    document.getElementById('mobileMenu').classList.remove('show');
-    // Close all submenus when closing main menu
-    document.querySelectorAll('.mobile-submenu').forEach(sub => {
-        sub.style.display = 'none';
-    });
-}
-
-function toggleSubmenu(event, submenuId) {
-    event.preventDefault();
-    const submenu = document.getElementById(submenuId);
-    
-    // Close all other submenus first
-    document.querySelectorAll('.mobile-submenu').forEach(sub => {
-        sub.style.display = 'none';
-    });
-    
-    // Toggle the clicked one
-    submenu.style.display = submenu.style.display === 'block' ? 'none' : 'block';
-}
-
-// Close menu when clicking outside (optional)
-document.addEventListener('click', function(e) {
-    const menu = document.getElementById('mobileMenu');
-    const menuButton = document.querySelector('.mobile-menu-button');
-    
-    if (menu.classList.contains('show') && 
-        !menu.contains(e.target) && 
-        !menuButton.contains(e.target)) {
-        closeMobileMenu();
-    }
-});
-</script>
-        <!-- NEW VERTICAL SPLIT DESIGN -->
-        <style>
-            /* Vertical Split Layout */
-            .vertical-split-section {
-                position: relative;
-                min-height: 800px;
-                display: flex;
-                margin: 40px 0;
-                overflow: hidden;
-            }
+            /* --- YOUR ORIGINAL MOBILE MENU STYLES --- */
+            .mobile-menu { position: fixed; top: 0; left: -100%; width: 80%; max-width: 400px; height: 100%; background: #1a1a1a; z-index: 10001; transition: left 0.3s ease; overflow-y: auto; padding: 60px 20px 30px; box-shadow: 2px 0 10px rgba(0,0,0,0.3); }
+            .mobile-menu.show { left: 0; }
+            .mobile-menu ul { list-style: none; padding: 0; margin: 0; }
+            .mobile-menu > ul > li { margin-bottom: 5px; border-bottom: 1px solid rgba(255,255,255,0.1); }
+            .mobile-menu > ul > li > a { display: block; padding: 15px 10px; color: white; text-decoration: none; font-size: 18px; font-weight: bold; letter-spacing: 1px; }
+            .mobile-menu > ul > li > a:hover { background: #D4B895; color: black; }
+            .mobile-submenu { display: none; list-style: none; padding: 0; margin: 0 0 10px 0; background: rgba(255,255,255,0.05); border-radius: 5px; }
+            .mobile-submenu li { border-bottom: 1px solid rgba(255,255,255,0.05); }
+            .mobile-submenu li:last-child { border-bottom: none; }
+            .mobile-submenu li a { display: block; padding: 12px 20px 12px 30px; color: #ddd; text-decoration: none; font-size: 16px; }
+            .mobile-submenu li a:hover { background: #D4B895; color: black; }
+            .mobile-menu-close { position: absolute; top: 15px; right: 15px; color: white; font-size: 30px; cursor: pointer; z-index: 10002; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; }
+            .mobile-menu-close:hover { color: #D4B895; }
+            .mobile-menu-button { position: relative; margin: 10px auto; text-align: center; width: 100%; }
+            .mobile-menu-button button { background: #D4B895; color: black; border: none; padding: 12px 40px; font-size: 18px; font-weight: bold; border-radius: 5px; cursor: pointer; display: inline-block; text-transform: uppercase; letter-spacing: 1px; }
             
-            .split-left {
-                flex: 1;
-                background-color: #000000;
-                color: white;
-                padding: 60px 40px;
-                position: relative;
-                display: flex;
-                align-items: center;
-            }
+            @media (max-width: 991px) { .navbar-collapse, #dl-menu, .dl-menuwrapper, .dl-trigger { display: none !important; } }
+            @media (min-width: 992px) { .mobile-menu-button, .mobile-menu { display: none !important; } }
             
-            .split-left::after {
-                content: '';
-                position: absolute;
-                top: 0;
-                right: 0;
-                width: 4px;
-                height: 100%;
-                background: linear-gradient(to bottom, #D4B895, #ffffff, #D4B895);
+            /* --- YOUR ORIGINAL FOOTER MOBILE STYLES --- */
+            @media (max-width: 767px) {
+                .footer-widget-container { margin-bottom: 30px; text-align: center !important; }
+                .footer-widget-container:first-child { text-align: center !important; }
+                .footer-widget-container:first-child p { font-size: 14px; margin-bottom: 8px; line-height: 1.4; text-align: center !important; }
+                .footer-widget-container:first-child p:first-of-type { color: #bcc0c4 !important; font-size: 16px; margin: 15px 0 5px 0; text-align: center !important; }
+                .footer-widget-container:first-child form { max-width: 220px; margin: 5px auto !important; }
+                .footer-widget-container:first-child input#newsletterEmail { height: 36px !important; padding: 8px 40px 8px 10px !important; font-size: 12px !important; }
+                .footer-widget-container:first-child button#newsletterSubmitBtn { width: 36px !important; height: 36px !important; }
+                .footer-widget-container:first-child button#newsletterSubmitBtn i { font-size: 14px !important; }
+                .footer-widget-container .icon-container img { max-width: 280px !important; margin: 0 auto !important; display: block; }
+                .footer-widget-container:last-child { text-align: center !important; }
+                .footer-widget-container:last-child address, .footer-widget-container:last-child .text-big, .footer-widget-container:last-child p { margin-bottom: 5px; text-align: center !important; }
+                .footer-widget-container .title h3 { text-align: center !important; }
+                .copyright-container p { font-size: 11px; line-height: 1.5; padding: 0 10px; text-align: center; }
             }
-            
-            .split-right {
-                flex: 1;
-                background-color: #ffffff;
-                color: #333333;
-                padding: 60px 40px;
-                display: flex;
-                align-items: center;
+            @media (max-width: 480px) {
+                .footer-widget-container:first-child p { font-size: 13px; }
+                .footer-widget-container:first-child form { max-width: 180px; margin: 5px auto !important; }
+                .footer-widget-container:first-child input#newsletterEmail { height: 32px !important; padding: 6px 35px 6px 8px !important; font-size: 11px !important; }
+                .footer-widget-container:first-child button#newsletterSubmitBtn { width: 32px !important; height: 32px !important; }
+                .footer-widget-container .icon-container img { max-width: 200px !important; }
             }
+
+            /* --- NEW FANCY FORM STYLES --- */
+            body { background-color: #f4f4f4; } /* Light grey background to make the form pop */
             
-            .split-content {
-                max-width: 500px;
-                margin: 0 auto;
+            .fancy-form-container {
+                background: #ffffff;
+                border-top: 5px solid #D4B895;
+                border-radius: 8px;
+                box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+                padding: 40px;
+                margin-bottom: 60px;
+                max-width: 1100px;
+                margin-left: auto;
+                margin-right: auto;
             }
-            
-            /* Left side styles (black) */
-            .split-left .section-title {
-                font-size: 14px;
-                text-transform: uppercase;
-                letter-spacing: 3px;
-                color: #D4B895;
-                margin-bottom: 20px;
-                font-weight: 600;
-            }
-            
-            .split-left h2 {
-                font-size: 48px;
+
+            .fancy-form-container h2 {
+                color: #000000;
                 font-weight: 800;
-                color: white;
-                margin-bottom: 30px;
-                line-height: 1.2;
-                font-family: 'Raleway', sans-serif;
-            }
-            
-            .split-left h2 span {
-                color: #D4B895;
-                display: block;
-                font-size: 32px;
-                font-weight: 400;
-                margin-top: 10px;
-            }
-            
-            .split-left .highlight-text {
-                font-size: 18px;
-                color: #D4B895;
-                margin-bottom: 25px;
-                font-weight: 600;
-                border-left: 3px solid #D4B895;
-                padding-left: 20px;
-            }
-            
-            .split-left p {
-                color: #cccccc;
-                line-height: 1.8;
-                margin-bottom: 30px;
-            }
-            
-            /* Stats Container (in left side) */
-            .stats-container-left {
-                display: grid;
-                grid-template-columns: repeat(2, 1fr);
-                gap: 30px;
-                margin-top: 40px;
-            }
-            
-            .stat-item-left {
-                text-align: center;
-            }
-            
-            .stat-number-left {
-                font-size: 42px;
-                font-weight: 800;
-                color: #D4B895;
-                line-height: 1;
-                margin-bottom: 10px;
-                font-family: 'Raleway', sans-serif;
-            }
-            
-            .stat-label-left {
-                font-size: 14px;
-                color: white;
+                font-size: 28px;
                 text-transform: uppercase;
                 letter-spacing: 1px;
-                font-weight: 600;
+                margin-bottom: 10px;
+                border-bottom: 2px solid #D4B895;
+                padding-bottom: 10px;
+                display: inline-block;
             }
-            
-            /* Right side styles (white) */
-            .split-right .section-subtitle {
-                font-size: 14px;
-                text-transform: uppercase;
-                letter-spacing: 3px;
-                color: #D4B895;
-                margin-bottom: 15px;
-                font-weight: 600;
-            }
-            
-            .split-right h3 {
-                font-size: 30px;
-                font-weight: 700;
-                color: #000000;
-                margin-bottom: 25px;
-                font-family: 'Raleway', sans-serif;
-                position: relative;
-                padding-bottom: 15px;
-            }
-            
-            .split-right h3::after {
-                content: '';
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                width: 60px;
-                height: 3px;
-                background-color: #D4B895;
-            }
-            
-            .split-right .feature-list {
-                margin-top: 30px;
-            }
-            
-            .split-right .feature-item {
-                display: flex;
-                gap: 15px;
-                margin-bottom: 25px;
-                align-items: flex-start;
-            }
-            
-            .feature-icon {
-                width: 40px;
-                height: 40px;
-                background-color: #D4B895;
-                border-radius: 50%;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                color: black;
-                font-size: 18px;
-                flex-shrink: 0;
-            }
-            
-            .feature-text h4 {
-                font-size: 18px;
-                font-weight: 700;
-                color: #000000;
-                margin-bottom: 5px;
-            }
-            
-            .feature-text p {
+
+            .fancy-form-container p.intro-text {
                 color: #666;
+                font-size: 16px;
                 line-height: 1.6;
-                margin: 0;
+                margin-bottom: 35px;
             }
-            
-            /* Responsive */
-            @media (max-width: 992px) {
-                .vertical-split-section {
-                    flex-direction: column;
-                }
-                
-                .split-left::after {
-                    width: 100%;
-                    height: 4px;
-                    top: auto;
-                    bottom: 0;
-                    right: auto;
-                    background: linear-gradient(to right, #D4B895, #ffffff, #D4B895);
-                }
-                
-                .split-left h2 {
-                    font-size: 42px;
-                }
+
+            /* The Grid System for the form */
+            .fancy-form-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 25px;
             }
-            
+
+            /* Individual Field Groups */
+            .form-group {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .form-group label {
+                font-weight: 700;
+                color: #333;
+                font-size: 14px;
+                margin-bottom: 8px;
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
+            }
+
+            .form-group label .required {
+                color: #e74c3c;
+                margin-left: 3px;
+            }
+
+            /* Fancy Inputs & Selects */
+            .form-group input[type="text"],
+            .form-group input[type="tel"],
+            .form-group input[type="email"],
+            .form-group input[type="number"],
+            .form-group select {
+                width: 100%;
+                padding: 14px 15px;
+                border: 2px solid #e0e0e0;
+                border-radius: 5px;
+                font-size: 15px;
+                color: #333;
+                background-color: #fafafa;
+                transition: all 0.3s ease;
+                font-family: 'Open Sans', sans-serif;
+                box-sizing: border-box;
+            }
+
+            .form-group input:focus,
+            .form-group select:focus {
+                border-color: #D4B895;
+                background-color: #ffffff;
+                outline: none;
+                box-shadow: 0 0 8px rgba(212, 184, 149, 0.4);
+            }
+
+            .form-group input::placeholder {
+                color: #aaa;
+                font-style: italic;
+            }
+
+            /* Remove number input arrows */
+            input[type="number"]::-webkit-inner-spin-button,
+            input[type="number"]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
+            input[type="number"] { -moz-appearance: textfield; }
+
+            /* The Submit Button */
+            .fancy-submit-btn {
+                grid-column: 1 / -1; /* Spans full width of grid */
+                background-color: #D4B895;
+                color: #000000;
+                border: none;
+                padding: 18px 40px;
+                font-size: 20px;
+                font-weight: 800;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                margin-top: 20px;
+                box-shadow: 0 4px 15px rgba(212, 184, 149, 0.4);
+            }
+
+            .fancy-submit-btn:hover {
+                background-color: #c0a07a;
+                transform: translateY(-2px);
+                box-shadow: 0 6px 20px rgba(212, 184, 149, 0.6);
+            }
+
+            /* Status Message Styling */
+            #form-status {
+                grid-column: 1 / -1;
+                text-align: center;
+                margin: 15px 0;
+                padding: 15px;
+                border-radius: 5px;
+                font-weight: bold;
+                display: none; /* Hidden by default */
+            }
+            #form-status.success { display: block; background-color: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
+            #form-status.error { display: block; background-color: #f8d7da; color: #721c24; border: 1px solid #f5c6cb; }
+            #form-status.loading { display: block; background-color: #fff3cd; color: #856404; border: 1px solid #ffeeba; }
+
+            /* Responsive tweaks */
             @media (max-width: 768px) {
-                .split-left, .split-right {
-                    padding: 40px 20px;
-                }
-                
-                .split-left h2 {
-                    font-size: 36px;
-                }
-                
-                .stats-container-left {
-                    grid-template-columns: 1fr;
-                }
-            }
-            
-            /* Remove gap from page title */
-            .page-title-style01 {
-                margin-bottom: 0 !important;
-                padding-bottom: 0 !important;
+                .fancy-form-container { padding: 25px 20px; margin: 20px; }
+                .fancy-form-container h2 { font-size: 22px; }
+                .fancy-submit-btn { font-size: 16px; padding: 15px 30px; }
             }
         </style>
-<style>
-/* Remove number input arrows */
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    margin: 0;
-}
-input[type="number"] {
-    -moz-appearance: textfield;
-    appearance: textfield;
-    appearance: textfield;
-}
-</style>
-
     </head>
     <body>
         <div class="header-wrapper">
-            <!-- .header.header-style01 start -->
-            <header id="header"  class="header-style02">
+            <!-- Header code remains exactly the same -->
+            <header id="header" class="header-style02">
                 <div id="top-bar-wrapper" class="clearfix">
                     <div class="container">
                         <div class="row">
                             <div class="col-md-6">
                                 <ul id="quick-links">
-                                    <li>
-                                        <i class="fa fa-phone"></i>
-                                        <span>(208) 651-9597</span>
-                                    </li>
-                                    <li>
-                                        <i class="fa fa-envelope"></i>
-                                        <a href="contact-simple.html">Contact us today</a>
-                                    </li>
-                                </ul><!-- .quick links end -->
-                            </div><!-- .col-md-6 end -->
-                               </a>
-                                        </li>
-                                    </ul><!-- .wpml-lang-dropdown end -->
-                                </div><!-- .wpml-languages.enabled end -->
-                            </div><!-- .col-md-6 end -->
-                        </div><!-- .row end -->
-                    </div><!-- .container end -->
-                </div><!-- .top-bar-wrapper end -->
+                                    <li><i class="fa fa-phone"></i><span>(208) 651-9597</span></li>
+                                    <li><i class="fa fa-envelope"></i><a href="contact-simple.html">Contact us today</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+        </div>
+
         <div class="header-wrapper header-transparent">
-            <!-- .header.header-style01 start -->
-            <header id="header"  class="header-style01">
-                <!-- .container start -->
+            <header id="header" class="header-style01">
                 <div class="container">
-                    <!-- .main-nav start -->
                     <div class="main-nav">
-                        <!-- .row start -->
                         <div class="row">
                             <div class="col-md-12">
                                 <nav class="navbar navbar-default nav-left" role="navigation">
-                                    <!-- .navbar-header start -->
                                     <div class="navbar-header">
                                         <div class="logo">
                                             <a href="index.html">
                                                 <img src="img/logo.jpg" alt="TCI Trucking LLC" style="width: 200px; height: auto;">
                                             </a>
-                                        </div><!-- .logo end -->
-                                    </div><!-- .navbar-header start -->
-                                    <!-- MAIN NAVIGATION -->
+                                        </div>
+                                    </div>
                                     <div class="collapse navbar-collapse">
                                         <ul class="nav navbar-nav">
-                                            <li class="dropdown">
-                                                <a href="#" data-toggle="dropdown" class="dropdown-toggle">Home</a>
-                                                <ul class="dropdown-menu">
-                                                    <li><a href="index.html">Home</a></li>
-                                                </ul><!-- .dropdown-menu end -->
-                                            </li><!-- .dropdown end -->
-                                            <li class="dropdown current-menu-item">
-                                                <a href="#" data-toggle="dropdown" class="dropdown-toggle">About</a>
-                                                <ul class="dropdown-menu">
-                                                    <li class="dropdown dropdown-submenu">
-                                                    <li><a href="about01.html">Who We Are</a></li>
-                                                    <li><a href="simple-page-title.html">Meet the Team</a></li>
-                                                    <li><a href="driver-application.html">Online Driver Application</a></li>
-                                               </ul><!-- .dropdown-menu end -->
-                                            </li><!-- .dropdown end -->
-                                            <li class="dropdown">
-                                                <a href="" data-toggle="dropdown" class="dropdown-toggle">Services</a>
-                                                <ul class="dropdown-menu">
-                                                    <li><a href="services01.html">What We Offer</a></li>
-                                                    <li><a href="consulting-services.html">Frequently Asked Questions</a></li>
-                                                </ul><!-- .dropdown-menu end -->
-                                            </li><!-- .dropdown end -->
-                                            <li class="dropdown">
-                                                <a href="" data-toggle="dropdown" class="dropdown-toggle">Contact</a>
-                                                <ul class="dropdown-menu">
-                                                    <li><a href="contact-simple.html">Contact Us</a></li>
-                                                </ul><!-- .dropdown-menu end -->
-                                            </li><!-- .dropdown end -->
-                                        </ul><!-- .nav.navbar-nav end -->
-                                        <!-- RESPONSIVE MENU -->
+                                            <li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Home</a><ul class="dropdown-menu"><li><a href="index.html">Home</a></li></ul></li>
+                                            <li class="dropdown current-menu-item"><a href="#" data-toggle="dropdown" class="dropdown-toggle">About</a><ul class="dropdown-menu"><li><a href="about01.html">Who We Are</a></li><li><a href="simple-page-title.html">Meet the Team</a></li><li><a href="driver-application.html">Online Driver Application</a></li></ul></li>
+                                            <li class="dropdown"><a href="" data-toggle="dropdown" class="dropdown-toggle">Services</a><ul class="dropdown-menu"><li><a href="services01.html">What We Offer</a></li><li><a href="consulting-services.html">Frequently Asked Questions</a></li></ul></li>
+                                            <li class="dropdown"><a href="" data-toggle="dropdown" class="dropdown-toggle">Contact</a><ul class="dropdown-menu"><li><a href="contact-simple.html">Contact Us</a></li></ul></li>
+                                        </ul>
                                         <div id="dl-menu" class="dl-menuwrapper">
                                             <button class="dl-trigger">Open Menu</button>
                                             <ul class="dl-menu">
-                                                <li>
-                                                    <a href="index.html">Home</a>
-                                                    <ul class="dl-submenu">
-                                                        <li><a href="index.html">Home</a></li>
-                                                    </ul><!-- dl-submenu end -->
-                                                </li>
-                                                <li>
-                                                    <a href="#">About</a>
-                                                    <ul class="dl-submenu">
-                                                         <li><a href="about01.html">Who We Are</a></li>
-                                                    <li><a href="simple-page-title.html">Meet the Team</a></li>
-                                                    <li><a href="driver-application.html">Online Driver Application</a></li>
-                                                    </ul><!-- dl-submenu end -->
-                                                </li>
-                                                <li>
-                                                    <a href="#">Services</a>
-                                                    <ul class="dl-submenu">
-                                                        <li><a href="services01.html">What We Offer</a></li>
-                                                    <li><a href="consulting-services.html">Frequently Asked Questions</a></li>
-                                                    </ul><!-- dl-submenu end -->
-                                                </li>
-                                                <li>
-                                                    <a href="#">Contact</a>
-                                                    <ul class="dl-submenu">
-                                                        <li><a href="contact-simple.html">Contact Us</a></li>
-                                                    </ul><!-- .dl-submenu end -->
-                                                </li>
-                                            </ul><!-- .dl-menu end -->
-                                        </div><!-- #dl-menu end -->
-                                    </div><!-- MAIN NAVIGATION END -->
-                                </nav><!-- .navbar.navbar-default end -->
-                                <!-- MOBILE MENU - OVERLAY STYLE -->
-<div class="mobile-menu-button">
-    <button onclick="toggleMobileMenu()">☰ MENU</button>
-</div>
-<div class="mobile-menu" id="mobileMenu">
-    <div class="mobile-menu-close" onclick="closeMobileMenu()">✕</div>
-    <ul>
-        <li>
-            <a href="#" onclick="toggleSubmenu(event, 'home-submenu-mobile')">HOME</a>
-            <ul class="mobile-submenu" id="home-submenu-mobile">
-                <li><a href="index.html" onclick="closeMobileMenu()">Home</a></li>
-            </ul>
-        </li>
-        <li>
-            <a href="#" onclick="toggleSubmenu(event, 'about-submenu-mobile')">ABOUT</a>
-            <ul class="mobile-submenu" id="about-submenu-mobile">
-                <li><a href="about01.html" onclick="closeMobileMenu()">Who We Are</a></li>
-                <li><a href="simple-page-title.html" onclick="closeMobileMenu()">Meet the Team</a></li>
-                <li><a href="driver-application.html" onclick="closeMobileMenu()">Online Driver Application</a></li>
-            </ul>
-        </li>
-        <li>
-            <a href="#" onclick="toggleSubmenu(event, 'services-submenu-mobile')">SERVICES</a>
-            <ul class="mobile-submenu" id="services-submenu-mobile">
-                <li><a href="services01.html" onclick="closeMobileMenu()">What We Offer</a></li>
-                <li><a href="consulting-services.html" onclick="closeMobileMenu()">Frequently Asked Questions</a></li>
-            </ul>
-        </li>
-        <li>
-            <a href="#" onclick="toggleSubmenu(event, 'contact-submenu-mobile')">CONTACT</a>
-            <ul class="mobile-submenu" id="contact-submenu-mobile">
-                <li><a href="contact-simple.html" onclick="closeMobileMenu()">Contact Us</a></li>
-            </ul>
-        </li>
-    </ul>
-</div>
-                            </div><!-- .col-md-12 end -->
-                        </div><!-- .row end -->
-                    </div><!-- .main-nav end -->
-                </div><!-- .container end -->
-            </header><!-- .header.header-style01 -->
-        </div><!-- .header-wrapper.header-transparent end -->
+                                                <li><a href="index.html">Home</a></li>
+                                                <li><a href="#">About</a><ul class="dl-submenu"><li><a href="about01.html">Who We Are</a></li><li><a href="simple-page-title.html">Meet the Team</a></li><li><a href="driver-application.html">Online Driver Application</a></li></ul></li>
+                                                <li><a href="#">Services</a><ul class="dl-submenu"><li><a href="services01.html">What We Offer</a></li><li><a href="consulting-services.html">Frequently Asked Questions</a></li></ul></li>
+                                                <li><a href="#">Contact</a><ul class="dl-submenu"><li><a href="contact-simple.html">Contact Us</a></li></ul></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </nav>
+                                <!-- MOBILE MENU -->
+                                <div class="mobile-menu-button"><button onclick="toggleMobileMenu()">☰ MENU</button></div>
+                                <div class="mobile-menu" id="mobileMenu">
+                                    <div class="mobile-menu-close" onclick="closeMobileMenu()">✕</div>
+                                    <ul>
+                                        <li><a href="#" onclick="toggleSubmenu(event, 'home-submenu-mobile')">HOME</a><ul class="mobile-submenu" id="home-submenu-mobile"><li><a href="index.html" onclick="closeMobileMenu()">Home</a></li></ul></li>
+                                        <li><a href="#" onclick="toggleSubmenu(event, 'about-submenu-mobile')">ABOUT</a><ul class="mobile-submenu" id="about-submenu-mobile"><li><a href="about01.html" onclick="closeMobileMenu()">Who We Are</a></li><li><a href="simple-page-title.html" onclick="closeMobileMenu()">Meet the Team</a></li><li><a href="driver-application.html" onclick="closeMobileMenu()">Online Driver Application</a></li></ul></li>
+                                        <li><a href="#" onclick="toggleSubmenu(event, 'services-submenu-mobile')">SERVICES</a><ul class="mobile-submenu" id="services-submenu-mobile"><li><a href="services01.html" onclick="closeMobileMenu()">What We Offer</a></li><li><a href="consulting-services.html" onclick="closeMobileMenu()">Frequently Asked Questions</a></li></ul></li>
+                                        <li><a href="#" onclick="toggleSubmenu(event, 'contact-submenu-mobile')">CONTACT</a><ul class="mobile-submenu" id="contact-submenu-mobile"><li><a href="contact-simple.html" onclick="closeMobileMenu()">Contact Us</a></li></ul></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+        </div>
         
-        <!-- .page-title start -->
+        <!-- Page Title -->
         <div class="page-title-style01 page-title-negative-top pt-bkg15">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
                         <h1>Become a part of our team</h1>
-                        <div class="breadcrumb-container">
-                            <ul class="breadcrumb clearfix">
-                            </ul><!-- .breadcrumb end -->
-                        </div><!-- .breadcrumb-container end -->
-                    </div><!-- .col-md-12 end -->
-                </div><!-- .row end -->
-            </div><!-- .container end -->
-        </div><!-- .page-title-style01.page-title-negative-top end -->
-        
-<!-- Add a gap here -->
-<div style="height: 60px; background: transparent;"></div>
-        <div class="page-content">
-            <div class="container">
-                    <div class="col-md-9">                        
-                        <div class="custom-heading">
-                            <h2>want to drive for us?</h2>
-                        </div>
-                        
-                        <p>
-                            Looking for your next driving opportunity? You’re in the right place. We keep things simple, 
-                            fair, and straightforward while working with dependable drivers who value safe, smooth operations. 
-                            Take a moment to fill out the application below — we’ll review it within 24 hours.
-                        </p>
-                        <br />
-                        <div class="custom-heading">
-    <h2>online driver application</h2>
-</div><!-- .custom-heading end -->
-
-<form class="wpcf7 driver-app-form clearfix" action="https://formspree.io/f/maqdvybe" method="POST">
-    
-    <!-- Formspree hidden fields -->
-    <input type="hidden" name="_subject" value="New Driver Application - TCI Trucking">
-    
-    <fieldset>
-        <label><span class="required">*</span> Driver first name:</label>
-        <input type="text" class="wpcf7-text" name="first_name" id="driver-name" required
-        style="padding: 8px; width: 280px; border: 1px solid #ddd; border-radius: 4px;">
-    </fieldset>
-    
-    <fieldset>
-        <label><span class="required">*</span> Driver last name:</label>
-        <input type="text" class="wpcf7-text" name="last_name" id="driver-last-name" required
-        style="padding: 8px; width: 280px; border: 1px solid #ddd; border-radius: 4px;">
-    </fieldset>
-    
-    <fieldset>
-        <label><span class="required">*</span> Date of Birth:</label>
-        <input type="text" name="dob" id="dob" placeholder="MM/DD/YYYY" maxlength="10" required
-               style="padding: 8px; width: 280px; border: 1px solid #ddd; border-radius: 4px;">
-    </fieldset>
-    
-    <fieldset>
-        <label><span class="required">*</span> You are:</label>
-        <select class="wpcf7-select" name="driver_type" id="driver-type" required>
-            <option value="" disabled selected>- Select -</option>
-            <option value="Owner Operator">Owner Operator</option>
-            <option value="Company Driver">Company Driver</option>
-        </select>
-    </fieldset>
-    
-    <fieldset>
-        <label><span class="required">*</span> Driver's license date issued:</label>
-        <input type="text" name="license_date" id="driver-license-date" placeholder="MM/DD/YYYY" maxlength="10" required
-               style="padding: 8px; width: 280px; border: 1px solid #ddd; border-radius: 4px;">
-    </fieldset>
-    
-    <fieldset>
-        <label><span class="required">*</span> Type of driver's licence:</label>
-        <input class="wpcf7-text" name="license_type" id="driver-licence-type" placeholder="e.g. Class A CDL" required
-                style="padding: 8px; width: 280px; border: 1px solid #ddd; border-radius: 4px;">
-    </fieldset>
-    
-    <fieldset>
-        <label><span class="required">*</span> Your phone number:</label>
-        <input type="tel" class="wpcf7-text" name="phone" id="driver-phone" inputmode="numeric"
-                style="padding: 8px; width: 280px; border: 1px solid #ddd; border-radius: 4px;" 
-               placeholder="(000) 000-0000" maxlength="14" required>
-    </fieldset>
-    
-    <fieldset>
-        <label><span class="required">*</span> Your Email:</label>
-        <input type="email" class="wpcf7-text" name="_replyto" id="driver-email" placeholder="you@example.com" required
-        style="padding: 8px; width: 280px; border: 1px solid #ddd; border-radius: 4px;">
-    </fieldset>
-    
-    <fieldset>
-        <label><span class="required">*</span> Years of experience:</label>
-        <input class="wpcf7-text" name="experience" id="driver-experience" placeholder="0" required
-        style="padding: 8px; width: 280px; border: 1px solid #ddd; border-radius: 4px;">
-    </fieldset>
-    
-    <!-- Status message -->
-    <div id="form-status" style="text-align: center; margin: 20px 0; padding: 10px; border-radius: 4px;"></div>
-    
-    <input type="submit" class="wpcf7-submit" value="apply now">
-</form>
-
-<!-- JavaScript for formatting and Formspree -->
-<script>
-// Date formatting for DOB
-document.getElementById('dob').addEventListener('input', function(e) {
-    let value = e.target.value.replace(/\D/g, '');
-    if (value.length >= 2) {
-        value = value.slice(0,2) + '/' + value.slice(2);
-    }
-    if (value.length >= 5) {
-        value = value.slice(0,5) + '/' + value.slice(5,9);
-    }
-    e.target.value = value.slice(0,10);
-});
-
-// Date formatting for license date
-document.getElementById('driver-license-date').addEventListener('input', function(e) {
-    let value = e.target.value.replace(/\D/g, '');
-    if (value.length >= 2) {
-        value = value.slice(0,2) + '/' + value.slice(2);
-    }
-    if (value.length >= 5) {
-        value = value.slice(0,5) + '/' + value.slice(5,9);
-    }
-    e.target.value = value.slice(0,10);
-});
-
-// Phone formatting
-document.getElementById('driver-phone').addEventListener('input', function(e) {
-    let value = e.target.value.replace(/\D/g, '');
-    if (value.length >= 3) {
-        value = '(' + value.slice(0,3) + ') ' + value.slice(3);
-    }
-    if (value.length >= 9) {
-        value = value.slice(0,9) + '-' + value.slice(9,13);
-    }
-    e.target.value = value.slice(0,14);
-});
-
-// Experience - numbers only
-document.getElementById('driver-experience').addEventListener('input', function(e) {
-    e.target.value = e.target.value.replace(/\D/g, '');
-});
-
-// Form submission handler
-document.querySelector('form').addEventListener('submit', async function(e) {
-    e.preventDefault();
-    
-    const form = e.target;
-    const formData = new FormData(form);
-    const statusDiv = document.getElementById('form-status');
-    
-    statusDiv.innerHTML = '⏳ Submitting application...';
-    statusDiv.style.backgroundColor = '#f0f0f0';
-    statusDiv.style.color = '#333';
-    
-    try {
-        const response = await fetch(form.action, {
-            method: 'POST',
-            body: formData,
-            headers: {
-                'Accept': 'application/json'
-            }
-        });
-        
-        if (response.ok) {
-            statusDiv.innerHTML = '✅ Application submitted successfully! We will contact you soon.';
-            statusDiv.style.backgroundColor = '#d4edda';
-            statusDiv.style.color = '#155724';
-            form.reset(); // Clear the form
-        } else {
-            const data = await response.json();
-            if (data.errors) {
-                statusDiv.innerHTML = '❌ Error: ' + data.errors.map(error => error.message).join(', ');
-            } else {
-                statusDiv.innerHTML = '❌ Something went wrong. Please try again.';
-            }
-            statusDiv.style.backgroundColor = '#f8d7da';
-            statusDiv.style.color = '#721c24';
-        }
-    } catch (error) {
-        statusDiv.innerHTML = '❌ Network error. Please check your connection and try again.';
-        statusDiv.style.backgroundColor = '#f8d7da';
-        statusDiv.style.color = '#721c24';
-    }
-});
-</script>
-
-                        </form><!-- .wpcf7 end -->
-                    </div><!-- .col-md-9 end -->
-                </div><!-- .row end -->
-            </div><!-- .container end -->
-        </div><!-- .page-content end -->      
-        
-<!-- Add a gap here -->
-<div style="height: 60px; background: transparent;"></div>
-
-        <div id="footer-wrapper" class="footer-dark">
-    <footer id="footer">
-        <div class="container">
-            <div class="row">
-                
-                <!-- COLUMN 1 - WHY DRIVERS CHOOSE TCI -->
-                <div class="col-md-4 col-sm-12 footer-widget-container">
-                    <div class="widget widget_newsletterwidget">
-                        <div class="title">
-                            <h3>WHY DRIVERS CHOOSE TCI</h3>
-                        </div>
-                        <p>90% Revenue to You – Keep more of what you earn</p>
-                        <p>Choose Your Loads – Our board, your choice. No forced dispatch</p>
-                        <p>3-Day Payments – Reliable direct deposit after paperwork</p>
-                        <p>24/7 Support – Real people, real support whenever you need it</p>
-                        
-                        <!-- NEWSLETTER FORM -->
-                        <div style="margin-top: 20px;">
-                            <p style="color: #bcc0c4; margin-bottom: 10px;">Email Us to learn more!</p>
-                            
-                            <form id="newsletterForm" action="https://formspree.io/f/mwvredgp" method="POST" style="position: relative; width: 100%; max-width: 280px;">
-                                <input type="hidden" name="_subject" value="New Newsletter Subscription - TCI Trucking">
-                                <input type="email" name="email" id="newsletterEmail" placeholder="Your email..." required 
-                                       style="width: 100%; padding: 10px 50px 10px 12px; background-color: #565f66; 
-                                              border: none; border-radius: 3px; color: #bcc0c4; font-style: italic; 
-                                              box-sizing: border-box; height: 40px; font-size: 13px;">
-                                
-                                <button type="submit" id="newsletterSubmitBtn" style="position: absolute; top: 0; right: 0; width: 40px; height: 40px; 
-                                        background-color: #D4B895; border: none; border-radius: 0 3px 3px 0; 
-                                        cursor: pointer; display: flex; align-items: center; justify-content: center;"
-                                        onmouseover="this.style.backgroundColor='#c0a07a'"
-                                        onmouseout="this.style.backgroundColor='#D4B895'">
-                                    <i class="fa fa-envelope" style="color: #000000; font-size: 16px;"></i>
-                                </button>
-                            </form>
-                            
-                            <!-- Success Message -->
-                            <div id="newsletterMessage" style="margin-top: 10px; color: #27ae60; font-size: 12px; display: none;"></div>
-                        </div>
+                        <div class="breadcrumb-container"><ul class="breadcrumb clearfix"></ul></div>
                     </div>
-                </div>
-                
-                <!-- COLUMN 2 - LOGO -->
-                <div class="col-md-4 col-sm-12 footer-widget-container">
-                    <div class="widget widget_pages">
-                        <div class="icon-container" style="text-align: center;">
-                            <img class="svg-black" src="img/logofooter.png" alt="TCI Trucking Logo" style="max-width: 370px;">
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- COLUMN 3 - CONTACT US -->
-                <ul class="col-md-4 col-sm-12 footer-widget-container clearfix">
-                            <li class="widget widget-text">
-                                <div class="title">
-                                    <h3>contact us</h3>
-                                </div>
-                                <address>
-                                    1523 N 13th St, <br />
-                                    Coeur d'Alene, ID
-                                </address>
-                                <span class="text-big">
-                                    (208) 651-9597
-                                </span>
-                                <p>tcitruckingllcinfo@gmail.com</p>
-                                <br />
-                                    <ul class="footer-social-icons" style="display: none;">
-                                    <li><a href="#" class="fa fa-facebook"></a></li>
-                                    <li><a href="#" class="fa fa-twitter"></a></li>
-                                    <li><a href="#" class="fa fa-google-plus"></a></li>
-                    </div><!-- .row end -->
-                </div><!-- .container end -->
-            </footer><!-- #footer end -->
-    <!-- COPYRIGHT SECTION -->
-    <div class="copyright-container">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <p style="color: #7f8c8d; text-align: center;">© 2026 TCI Trucking LLC | 
-                        <a href="Privacy Policy.html" style="color: inherit; text-decoration: none;">Privacy Policy</a> 
-                        | All Rights Reserved | USDOT 4027139 | MC 1520494
-                    </p>
                 </div>
             </div>
         </div>
-    </div>
-    <a href="#" class="scroll-up">Scroll</a>
-</div><!-- #footer-wrapper end -->
 
-<!-- Newsletter Form JavaScript -->
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    const form = document.getElementById('newsletterForm');
-    
-    if (form) {
-        form.addEventListener('submit', async function(e) {
+        <div style="height: 60px; background: transparent;"></div>
+
+        <!-- MAIN FORM CONTENT -->
+        <div class="page-content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        
+                        <div class="fancy-form-container">
+                            <h2>Want to drive for us?</h2>
+                            <p class="intro-text">
+                                Looking for your next driving opportunity? You’re in the right place. We keep things simple, 
+                                fair, and straightforward while working with dependable drivers who value safe, smooth operations. 
+                                Take a moment to fill out the application below — we’ll review it within 24 hours.
+                            </p>
+
+                            <form class="driver-app-form" action="https://formspree.io/f/maqdvybe" method="POST">
+                                
+                                <input type="hidden" name="_subject" value="New Driver Application - TCI Trucking">
+                                
+                                <div class="fancy-form-grid">
+                                    
+                                    <!-- Row 1 -->
+                                    <div class="form-group">
+                                        <label>Driver First Name <span class="required">*</span></label>
+                                        <input type="text" name="first_name" id="driver-name" required placeholder="John">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Driver Last Name <span class="required">*</span></label>
+                                        <input type="text" name="last_name" id="driver-last-name" required placeholder="Doe">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Date of Birth <span class="required">*</span></label>
+                                        <input type="text" name="dob" id="dob" placeholder="MM/DD/YYYY" maxlength="10" required>
+                                    </div>
+
+                                    <!-- Row 2 -->
+                                    <div class="form-group">
+                                        <label>You Are <span class="required">*</span></label>
+                                        <select name="driver_type" id="driver-type" required>
+                                            <option value="" disabled selected>- Select -</option>
+                                            <option value="Owner Operator">Owner Operator</option>
+                                            <option value="Company Driver">Company Driver</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Equipment Type <span class="required">*</span></label>
+                                        <select name="equipment_type" id="equipment-type" required>
+                                            <option value="" disabled selected>- Select -</option>
+                                            <option value="Semi Truck">Semi Truck</option>
+                                            <option value="Box Truck">Box Truck</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Best Way to Contact <span class="required">*</span></label>
+                                        <select name="contact_method" id="contact-method" required>
+                                            <option value="" disabled selected>- Select -</option>
+                                            <option value="Call">Call</option>
+                                            <option value="Text">Text</option>
+                                            <option value="Email">Email</option>
+                                        </select>
+                                    </div>
+
+                                    <!-- Row 3 -->
+                                    <div class="form-group">
+                                        <label>Driver's License Date Issued <span class="required">*</span></label>
+                                        <input type="text" name="license_date" id="driver-license-date" placeholder="MM/DD/YYYY" maxlength="10" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Type of Driver's License <span class="required">*</span></label>
+                                        <input type="text" name="license_type" id="driver-licence-type" placeholder="e.g. Class A CDL" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Years of Experience <span class="required">*</span></label>
+                                        <input type="text" name="experience" id="driver-experience" placeholder="0" required>
+                                    </div>
+
+                                    <!-- Row 4 -->
+                                    <div class="form-group">
+                                        <label>Phone Number <span class="required">*</span></label>
+                                        <input type="tel" name="phone" id="driver-phone" inputmode="numeric" placeholder="(000) 000-0000" maxlength="14" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Email Address <span class="required">*</span></label>
+                                        <input type="email" name="_replyto" id="driver-email" placeholder="you@example.com" required>
+                                    </div>
+                                    
+                                    <!-- Status Message -->
+                                    <div id="form-status"></div>
+                                    
+                                    <!-- Submit Button -->
+                                    <button type="submit" class="fancy-submit-btn">Apply Now</button>
+
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div style="height: 60px; background: transparent;"></div>
+
+        <!-- Footer remains exactly the same as your original -->
+        <div id="footer-wrapper" class="footer-dark">
+            <footer id="footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4 col-sm-12 footer-widget-container">
+                            <div class="widget widget_newsletterwidget">
+                                <div class="title"><h3>WHY DRIVERS CHOOSE TCI</h3></div>
+                                <p>90% Revenue to You – Keep more of what you earn</p>
+                                <p>Choose Your Loads – Our board, your choice. No forced dispatch</p>
+                                <p>3-Day Payments – Reliable direct deposit after paperwork</p>
+                                <p>24/7 Support – Real people, real support whenever you need it</p>
+                                <div style="margin-top: 20px;">
+                                    <p style="color: #bcc0c4; margin-bottom: 10px;">Email Us to learn more!</p>
+                                    <form id="newsletterForm" action="https://formspree.io/f/mwvredgp" method="POST" style="position: relative; width: 100%; max-width: 280px;">
+                                        <input type="hidden" name="_subject" value="New Newsletter Subscription - TCI Trucking">
+                                        <input type="email" name="email" id="newsletterEmail" placeholder="Your email..." required style="width: 100%; padding: 10px 50px 10px 12px; background-color: #565f66; border: none; border-radius: 3px; color: #bcc0c4; font-style: italic; box-sizing: border-box; height: 40px; font-size: 13px;">
+                                        <button type="submit" id="newsletterSubmitBtn" style="position: absolute; top: 0; right: 0; width: 40px; height: 40px; background-color: #D4B895; border: none; border-radius: 0 3px 3px 0; cursor: pointer; display: flex; align-items: center; justify-content: center;" onmouseover="this.style.backgroundColor='#c0a07a'" onmouseout="this.style.backgroundColor='#D4B895'">
+                                            <i class="fa fa-envelope" style="color: #000000; font-size: 16px;"></i>
+                                        </button>
+                                    </form>
+                                    <div id="newsletterMessage" style="margin-top: 10px; color: #27ae60; font-size: 12px; display: none;"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-12 footer-widget-container">
+                            <div class="widget widget_pages">
+                                <div class="icon-container" style="text-align: center;">
+                                    <img class="svg-black" src="img/logofooter.png" alt="TCI Trucking Logo" style="max-width: 370px;">
+                                </div>
+                            </div>
+                        </div>
+                        <ul class="col-md-4 col-sm-12 footer-widget-container clearfix">
+                            <li class="widget widget-text">
+                                <div class="title"><h3>contact us</h3></div>
+                                <address>1523 N 13th St, <br />Coeur d'Alene, ID</address>
+                                <span class="text-big">(208) 651-9597</span>
+                                <p>tcitruckingllcinfo@gmail.com</p>
+                                <br />
+                                <ul class="footer-social-icons" style="display: none;">
+                                    <li><a href="#" class="fa fa-facebook"></a></li>
+                                    <li><a href="#" class="fa fa-twitter"></a></li>
+                                    <li><a href="#" class="fa fa-google-plus"></a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </footer>
+            <div class="copyright-container">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <p style="color: #7f8c8d; text-align: center;">© 2026 TCI Trucking LLC | <a href="Privacy Policy.html" style="color: inherit; text-decoration: none;">Privacy Policy</a> | All Rights Reserved | USDOT 4027139 | MC 1520494</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="scroll-up">Scroll</a>
+        </div>
+
+        <!-- Your original Newsletter Form JavaScript -->
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('newsletterForm');
+            if (form) {
+                form.addEventListener('submit', async function(e) {
+                    e.preventDefault();
+                    const emailInput = document.getElementById('newsletterEmail');
+                    const messageDiv = document.getElementById('newsletterMessage');
+                    const submitBtn = document.getElementById('newsletterSubmitBtn');
+                    const email = emailInput.value.trim();
+                    if (!email || !email.includes('@') || !email.includes('.')) {
+                        messageDiv.style.display = 'block'; messageDiv.style.backgroundColor = '#f8d7da'; messageDiv.style.color = '#721c24'; messageDiv.innerHTML = '❌ Please enter a valid email address.'; return;
+                    }
+                    messageDiv.style.display = 'block'; messageDiv.style.backgroundColor = '#f0f0f0'; messageDiv.style.color = '#333'; messageDiv.innerHTML = '⏳ Subscribing...'; submitBtn.disabled = true;
+                    const formData = new FormData(form);
+                    try {
+                        const response = await fetch(form.action, { method: 'POST', body: formData, headers: { 'Accept': 'application/json' } });
+                        if (response.ok) {
+                            messageDiv.style.backgroundColor = '#d4edda'; messageDiv.style.color = '#155724'; messageDiv.innerHTML = '✓ Thanks for subscribing!'; form.reset();
+                            setTimeout(() => { messageDiv.style.display = 'none'; }, 5000);
+                        } else {
+                            const data = await response.json(); messageDiv.style.backgroundColor = '#f8d7da'; messageDiv.style.color = '#721c24'; messageDiv.innerHTML = '❌ ' + (data.errors ? data.errors.map(error => error.message).join(', ') : 'Something went wrong.');
+                        }
+                    } catch (error) {
+                        messageDiv.style.display = 'block'; messageDiv.style.backgroundColor = '#f8d7da'; messageDiv.style.color = '#721c24'; messageDiv.innerHTML = '❌ Network error. Please try again.';
+                    } finally { submitBtn.disabled = false; }
+                });
+            }
+        });
+        </script>
+
+        <!-- Your Original Scripts -->
+        <script src="js/jquery-2.1.4.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/jquery.srcipts.min.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
+        <script src="js/jquery.ui.map.full.min.js"></script>
+        <script src="js/jquery.dlmenu.min.js"></script>
+        <script src="js/include.js"></script>
+
+        <!-- YOUR ORIGINAL FORM LOGIC (Auto-formatting, Validation, Formspree submission) -->
+        <script>
+        // Date formatting for DOB
+        document.getElementById('dob').addEventListener('input', function(e) {
+            let value = e.target.value.replace(/\D/g, '');
+            if (value.length >= 2) { value = value.slice(0,2) + '/' + value.slice(2); }
+            if (value.length >= 5) { value = value.slice(0,5) + '/' + value.slice(5,9); }
+            e.target.value = value.slice(0,10);
+        });
+
+        // Date formatting for license date
+        document.getElementById('driver-license-date').addEventListener('input', function(e) {
+            let value = e.target.value.replace(/\D/g, '');
+            if (value.length >= 2) { value = value.slice(0,2) + '/' + value.slice(2); }
+            if (value.length >= 5) { value = value.slice(0,5) + '/' + value.slice(5,9); }
+            e.target.value = value.slice(0,10);
+        });
+
+        // Phone formatting
+        document.getElementById('driver-phone').addEventListener('input', function(e) {
+            let value = e.target.value.replace(/\D/g, '');
+            if (value.length >= 3) { value = '(' + value.slice(0,3) + ') ' + value.slice(3); }
+            if (value.length >= 9) { value = value.slice(0,9) + '-' + value.slice(9,13); }
+            e.target.value = value.slice(0,14);
+        });
+
+        // Experience - numbers only
+        document.getElementById('driver-experience').addEventListener('input', function(e) {
+            e.target.value = e.target.value.replace(/\D/g, '');
+        });
+
+        // Form submission handler (Formspree)
+        document.querySelector('form.driver-app-form').addEventListener('submit', async function(e) {
             e.preventDefault();
             
-            const emailInput = document.getElementById('newsletterEmail');
-            const messageDiv = document.getElementById('newsletterMessage');
-            const submitBtn = document.getElementById('newsletterSubmitBtn');
-            const email = emailInput.value.trim();
-            
-            // Simple validation
-            if (!email || !email.includes('@') || !email.includes('.')) {
-                messageDiv.style.display = 'block';
-                messageDiv.style.backgroundColor = '#f8d7da';
-                messageDiv.style.color = '#721c24';
-                messageDiv.innerHTML = '❌ Please enter a valid email address.';
-                return;
-            }
-            
-            // Show loading state
-            messageDiv.style.display = 'block';
-            messageDiv.style.backgroundColor = '#f0f0f0';
-            messageDiv.style.color = '#333';
-            messageDiv.innerHTML = '⏳ Subscribing...';
-            submitBtn.disabled = true;
-            
+            const form = e.target;
             const formData = new FormData(form);
+            const statusDiv = document.getElementById('form-status');
+            
+            statusDiv.className = 'loading';
+            statusDiv.innerHTML = '⏳ Submitting application...';
             
             try {
                 const response = await fetch(form.action, {
                     method: 'POST',
                     body: formData,
-                    headers: {
-                        'Accept': 'application/json'
-                    }
+                    headers: { 'Accept': 'application/json' }
                 });
                 
                 if (response.ok) {
-                    messageDiv.style.backgroundColor = '#d4edda';
-                    messageDiv.style.color = '#155724';
-                    messageDiv.innerHTML = '✓ Thanks for subscribing!';
+                    statusDiv.className = 'success';
+                    statusDiv.innerHTML = '✅ Application submitted successfully! We will contact you soon.';
                     form.reset();
-                    
-                    setTimeout(() => {
-                        messageDiv.style.display = 'none';
-                    }, 5000);
                 } else {
                     const data = await response.json();
-                    messageDiv.style.backgroundColor = '#f8d7da';
-                    messageDiv.style.color = '#721c24';
-                    messageDiv.innerHTML = '❌ ' + (data.errors ? data.errors.map(error => error.message).join(', ') : 'Something went wrong.');
+                    statusDiv.className = 'error';
+                    if (data.errors) {
+                        statusDiv.innerHTML = '❌ Error: ' + data.errors.map(error => error.message).join(', ');
+                    } else {
+                        statusDiv.innerHTML = '❌ Something went wrong. Please try again.';
+                    }
                 }
             } catch (error) {
-                messageDiv.style.display = 'block';
-                messageDiv.style.backgroundColor = '#f8d7da';
-                messageDiv.style.color = '#721c24';
-                messageDiv.innerHTML = '❌ Network error. Please try again.';
-            } finally {
-                submitBtn.disabled = false;
+                statusDiv.className = 'error';
+                statusDiv.innerHTML = '❌ Network error. Please check your connection and try again.';
             }
         });
-    }
-});
-</script>
-<!-- Only essential scripts -->
-<script src="js/jquery-2.1.4.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/jquery.srcipts.min.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
-<script src="js/jquery.ui.map.full.min.js"></script>
-<script src="js/jquery.dlmenu.min.js"></script>
-<script src="js/include.js"></script>
-
-<script>
-jQuery(document).ready(function($) {
-    $(".wpcf7-submit").on("click", function(event) {
-        event.preventDefault();
-        
-        // Get form values
-        var driver_name = $("#driver-name").val();
-        var driver_last_name = $("#driver-last-name").val();
-        var date_of_birth = $("#driver-birth-date").val();
-        var license_date_issued = $("#driver-license-date").val();
-        var driver_type = $("#driver-type option:selected").text();
-        var licence_period = $("#driver-licence-period").val();
-        var licence_type = $("#driver-licence-type").val();
-        var phone_number = $("#driver-phone").val().replace(/[^0-9]/g, "");
-        var cell_number = $("#driver-cell").val().replace(/[^0-9]/g, "");
-        var driver_experience = $("#driver-experience").val();
-        
-        // Helper function to check if a string contains only numbers
-        function isNumbersOnly(input) {
-            return /^\d+$/.test(input);
-        }
-        
-        // Validate numbers-only fields
-        if (!isNumbersOnly(phone_number)) {
-            alert("Phone number must contain only numbers.");
-            return;
-        }
-        
-        if (cell_number && !isNumbersOnly(cell_number)) {
-            alert("Cell number must contain only numbers.");
-            return;
-        }
-        
-        if (driver_experience && !isNumbersOnly(driver_experience)) {
-            alert("Years of experience must be a number only.");
-            return;
-        }
-        
-        // Validate date format (assuming MM/DD/YYYY or YYYY-MM-DD)
-        function isValidDate(dateString) {
-            // Check for MM/DD/YYYY format
-            var regex = /^\d{2}\/\d{2}\/\d{4}$/;
-            if (regex.test(dateString)) {
-                var parts = dateString.split('/');
-                var month = parseInt(parts[0], 10);
-                var day = parseInt(parts[1], 10);
-                var year = parseInt(parts[2], 10);
-                
-                if (year < 1900 || year > new Date().getFullYear()) return false;
-                if (month < 1 || month > 12) return false;
-                var daysInMonth = new Date(year, month, 0).getDate();
-                if (day < 1 || day > daysInMonth) return false;
-                return true;
-            }
-            
-            // Check for YYYY-MM-DD format
-            regex = /^\d{4}-\d{2}-\d{2}$/;
-            if (regex.test(dateString)) {
-                var parts = dateString.split('-');
-                var year = parseInt(parts[0], 10);
-                var month = parseInt(parts[1], 10);
-                var day = parseInt(parts[2], 10);
-                
-                if (year < 1900 || year > new Date().getFullYear()) return false;
-                if (month < 1 || month > 12) return false;
-                var daysInMonth = new Date(year, month, 0).getDate();
-                if (day < 1 || day > daysInMonth) return false;
-                return true;
-            }
-            
-            return false;
-        }
-        
-        if (!isValidDate(date_of_birth)) {
-            alert("Date of Birth must be in MM/DD/YYYY or YYYY-MM-DD format and be a valid date.");
-            return;
-        }
-        
-        if (!isValidDate(license_date_issued)) {
-            alert("License date issued must be in MM/DD/YYYY or YYYY-MM-DD format and be a valid date.");
-            return;
-        }
-        
-        // Create form data object
-        var formData = {
-            "driver_name": driver_name,
-            "driver_last_name": driver_last_name,
-            "date_of_birth": date_of_birth,
-            "license_date_issued": license_date_issued,
-            "driver_type": driver_type,
-            "licence_period": licence_period,
-            "licence_type": licence_type,
-            "phone_number": phone_number,
-            "cell_number": cell_number,
-            "driver_experience": driver_experience
-        };
-        
-        // Validate required fields
-        var required = ["driver_name", "driver_last_name", "date_of_birth", "license_date_issued", "phone_number"];
-        for (var i = 0; i < required.length; i++) {
-            if (!formData[required[i]]) {
-                alert("Please fill in all required fields (marked with *).");
-                return;
-            }
-        }
-        
-        // Submit via AJAX
-        $.ajax({
-            type: "POST",
-            url: "contact.php",
-            data: {
-                "action": "driverApp",
-                "form_data": [formData]
-            },
-            success: function(response) {
-                alert("Application submitted successfully!");
-                $(".wpcf7-form")[0].reset();
-            },
-            error: function() {
-                alert("Error submitting application. Please try again.");
-            }
-        });
-    });
-});
+        </script>
+    </body>
+</html>
